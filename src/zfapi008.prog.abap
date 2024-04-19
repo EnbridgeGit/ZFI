@@ -1,0 +1,285 @@
+REPORT ZFAPI008 NO STANDARD PAGE HEADING LINE-SIZE 132 LINE-COUNT 65
+       MESSAGE-ID ZS.
+* This program will read a file of previously created vendors, extract
+* data for all Union vendors
+* to create a file to be uploaded to the mainframe. This file will be
+* used to recreate the vendor validation file.
+TABLES: LFA1,                                    "vendor mast details
+        LFB1,
+        TVARV,
+        CDHDR.
+DATA: BEGIN OF VENDOR,
+      PAYEE(5),
+      TYPE(1),
+      STATUS(1),
+      FILLER(32),
+      NAME(30),
+      DELIVLOC(30),
+      STREET(33),
+      POBOX(10),
+      TOWN(15),
+      PROV(15),
+      COUNTRY(15),
+      POSTAL(13),
+      ACTIONCD(1),
+      END OF VENDOR.
+DATA: POSTCD(6),
+      ZIPCODE(7),
+      TOWN_SW(1),
+      STREET_SW(1),
+      CHG_PAYEE(5),
+      LONGZIP(13).
+DATA MSG_TEXT(50).
+DATA: PAYEES(201) TYPE C.
+PARAMETERS:
+     OUTFILE LIKE FILENAME-FILEINTERN.
+PARAMETERS: FROMDATE TYPE D,
+            TODATE TYPE D.
+CALL FUNCTION 'FILE_GET_NAME'
+     EXPORTING
+          CLIENT           = SY-MANDT
+          LOGICAL_FILENAME = OUTFILE
+          OPERATING_SYSTEM = SY-OPSYS
+     IMPORTING
+          FILE_NAME = PAYEES
+     EXCEPTIONS
+          FILE_NOT_FOUND   = 01.
+     IF SY-SUBRC <> 0.
+       IF SY-INDEX = 1.
+         MESSAGE E006 WITH OUTFILE.
+       ENDIF.
+     ENDIF.
+OPEN DATASET PAYEES FOR OUTPUT IN TEXT MODE MESSAGE MSG_TEXT.
+IF SY-SUBRC NE 0.
+ WRITE:/ 'Payee create file cannot be opened. Reason:', MSG_TEXT.
+ EXIT.
+ENDIF.
+MOVE SPACE TO VENDOR.
+WRITE:/ 'START'.
+* loop throght the vendor file to find new vendors
+SELECT * FROM LFA1 WHERE ERDAT >= FROMDATE AND ERDAT <= TODATE
+                   AND KTOKK = 'VNDR'.
+  SELECT * FROM LFB1 WHERE LIFNR = LFA1-LIFNR
+                     AND BUKRS = 'UGL'.
+    MOVE SPACE TO VENDOR.
+    MOVE 'n' TO TOWN_SW.
+    MOVE 'n' TO STREET_SW.
+    MOVE LFA1-NAME1 TO VENDOR-NAME.
+    MOVE LFA1-LIFNR+5(5) TO VENDOR-PAYEE.
+    MOVE 'A' TO VENDOR-STATUS.
+    IF LFA1-KONZS = 'BUILDER'.
+       MOVE 'B' TO VENDOR-TYPE.
+    ELSEIF LFA1-KONZS = 'DEALER'.
+       MOVE 'D' TO VENDOR-TYPE.
+    ELSEIF LFA1-KONZS = 'INSTALLER'.
+       MOVE 'I' TO VENDOR-TYPE.
+    ELSEIF LFA1-KONZS = 'NGV DEALER'.
+       MOVE 'N' TO VENDOR-TYPE.
+    ELSEIF LFA1-KONZS = 'GAS SUPPLY'.
+       MOVE 'S' TO VENDOR-TYPE.
+    ELSE.
+      MOVE 'A' TO VENDOR-TYPE.
+    ENDIF.
+    IF LFA1-PSTLZ > SPACE.
+      MOVE LFA1-PSTLZ TO VENDOR-POSTAL.
+    ENDIF.
+    IF LFA1-LAND1 > SPACE.
+      IF LFA1-LAND1 = 'CA'.
+         MOVE 'CANADA' TO VENDOR-COUNTRY.
+      ELSEIF LFA1-LAND1 = 'US'.
+         MOVE 'UNITED STATES' TO VENDOR-COUNTRY.
+      ENDIF.
+    ENDIF.
+    IF LFA1-REGIO > SPACE.
+      MOVE LFA1-REGIO TO VENDOR-PROV.
+    ENDIF.
+    IF LFA1-PFACH > SPACE.
+      MOVE LFA1-PFACH TO VENDOR-POBOX.
+    ENDIF.
+    IF LFA1-ORT01 > SPACE.
+     MOVE LFA1-ORT01 TO VENDOR-TOWN.
+     MOVE 'y' TO TOWN_SW.
+    ENDIF.
+    IF LFA1-STRAS > SPACE.
+      IF TOWN_SW = 'y'.
+         MOVE LFA1-STRAS TO VENDOR-STREET.
+         MOVE 'y' TO STREET_SW.
+      ELSE.
+         MOVE LFA1-STRAS TO VENDOR-TOWN.
+         MOVE 'y' TO TOWN_SW.
+      ENDIF.
+    ENDIF.
+    IF LFA1-NAME4 > SPACE.
+      IF TOWN_SW = 'y'.
+       IF STREET_SW = 'y'.
+           MOVE LFA1-NAME4 TO VENDOR-DELIVLOC.
+       ELSE.
+           MOVE LFA1-NAME4 TO VENDOR-STREET.
+           MOVE 'y' TO STREET_SW.
+       ENDIF.
+      ELSEIF STREET_SW = 'y'.
+         MOVE LFA1-NAME4 TO VENDOR-DELIVLOC.
+    ELSE.
+       MOVE LFA1-NAME4 TO VENDOR-TOWN.
+       MOVE 'y' TO TOWN_SW.
+    ENDIF.
+    ENDIF.
+    IF LFA1-NAME3 > SPACE.
+      IF TOWN_SW = 'y'.
+        IF STREET_SW = 'y'.
+           MOVE LFA1-NAME3 TO VENDOR-DELIVLOC.
+        ELSE.
+           MOVE LFA1-NAME3 TO VENDOR-STREET.
+           MOVE 'y' TO STREET_SW.
+        ENDIF.
+      ELSEIF STREET_SW = 'y'.
+        MOVE LFA1-NAME3 TO VENDOR-DELIVLOC.
+      ELSE.
+        MOVE LFA1-NAME3 TO VENDOR-TOWN.
+        MOVE 'y' TO TOWN_SW.
+     ENDIF.
+   ENDIF.
+   IF LFA1-NAME2 > SPACE.
+     IF TOWN_SW = 'y'.
+        IF STREET_SW = 'y'.
+           MOVE LFA1-NAME2 TO VENDOR-DELIVLOC.
+        ELSE.
+           MOVE LFA1-NAME2 TO VENDOR-STREET.
+           MOVE 'y' TO STREET_SW.
+        ENDIF.
+     ELSEIF STREET_SW = 'y'.
+         MOVE LFA1-NAME2 TO VENDOR-DELIVLOC.
+     ELSE.
+        MOVE LFA1-NAME2 TO VENDOR-TOWN.
+        MOVE 'y' TO TOWN_SW.
+     ENDIF.
+   ENDIF.
+   MOVE 'A' TO VENDOR-ACTIONCD.
+   TRANSFER VENDOR TO PAYEES LENGTH 201.
+   ENDSELECT.
+ENDSELECT.
+*loop through the file of changed vendor data.
+SELECT * FROM CDHDR WHERE OBJECTCLAS = 'KRED'
+                    AND UDATE >= FROMDATE AND UDATE <= TODATE
+                    AND OBJECTID NOT LIKE 'E%'
+                    AND CHANGE_IND <> 'E'.
+  SELECT * FROM LFB1 WHERE LIFNR = CDHDR-OBJECTID
+                     AND BUKRS = 'UGL'.
+    SELECT * FROM LFA1 WHERE LIFNR = LFB1-LIFNR
+                       AND KTOKK = 'VNDR'.
+      MOVE SPACE TO VENDOR.
+      MOVE 'n' TO TOWN_SW.
+      MOVE 'n' TO STREET_SW.
+      MOVE LFA1-NAME1 TO VENDOR-NAME.
+      MOVE LFA1-LIFNR+5(5) TO VENDOR-PAYEE.
+      MOVE 'A' TO VENDOR-STATUS.
+      IF LFA1-LOEVM = 'X' OR
+         LFA1-SPERR = 'X' OR
+         LFA1-SPERM = 'X'.
+         MOVE 'I' TO VENDOR-STATUS.
+      ENDIF.
+      IF LFA1-KONZS = 'BUILDER'.
+         MOVE 'B' TO VENDOR-TYPE.
+      ELSEIF LFA1-KONZS = 'DEALER'.
+         MOVE 'D' TO VENDOR-TYPE.
+      ELSEIF LFA1-KONZS = 'INSTALLER'.
+         MOVE 'I' TO VENDOR-TYPE.
+      ELSEIF LFA1-KONZS = 'NGV DEALER'.
+         MOVE 'N' TO VENDOR-TYPE.
+      ELSEIF LFA1-KONZS = 'GAS SUPPLY'.
+         MOVE 'S' TO VENDOR-TYPE.
+      ELSE.
+         MOVE 'A' TO VENDOR-TYPE.
+      ENDIF.
+      IF LFA1-PSTLZ > SPACE.
+        MOVE LFA1-PSTLZ TO VENDOR-POSTAL.
+      ENDIF.
+      IF LFA1-LAND1 > SPACE.
+        IF LFA1-LAND1 = 'CA'.
+           MOVE 'CANADA' TO VENDOR-COUNTRY.
+        ELSEIF LFA1-LAND1 = 'US'.
+           MOVE 'UNITED STATES' TO VENDOR-COUNTRY.
+        ENDIF.
+      ENDIF.
+      IF LFA1-REGIO > SPACE.
+        MOVE LFA1-REGIO TO VENDOR-PROV.
+      ENDIF.
+      IF LFA1-PFACH > SPACE.
+        MOVE LFA1-PFACH TO VENDOR-POBOX.
+      ENDIF.
+      IF LFA1-ORT01 > SPACE.
+       MOVE LFA1-ORT01 TO VENDOR-TOWN.
+       MOVE 'y' TO TOWN_SW.
+      ENDIF.
+      IF LFA1-STRAS > SPACE.
+        IF TOWN_SW = 'y'.
+           MOVE LFA1-STRAS TO VENDOR-STREET.
+           MOVE 'y' TO STREET_SW.
+        ELSE.
+           MOVE LFA1-STRAS TO VENDOR-TOWN.
+           MOVE 'y' TO TOWN_SW.
+        ENDIF.
+      ENDIF.
+      IF LFA1-NAME4 > SPACE.
+        IF TOWN_SW = 'y'.
+          IF STREET_SW = 'y'.
+             MOVE LFA1-NAME4 TO VENDOR-DELIVLOC.
+          ELSE.
+             MOVE LFA1-NAME4 TO VENDOR-STREET.
+             MOVE 'y' TO STREET_SW.
+          ENDIF.
+        ELSEIF STREET_SW = 'y'.
+           MOVE LFA1-NAME4 TO VENDOR-DELIVLOC.
+      ELSE.
+         MOVE LFA1-NAME4 TO VENDOR-TOWN.
+         MOVE 'y' TO TOWN_SW.
+      ENDIF.
+      ENDIF.
+      IF LFA1-NAME3 > SPACE.
+        IF TOWN_SW = 'y'.
+          IF STREET_SW = 'y'.
+             MOVE LFA1-NAME3 TO VENDOR-DELIVLOC.
+          ELSE.
+             MOVE LFA1-NAME3 TO VENDOR-STREET.
+             MOVE 'y' TO STREET_SW.
+          ENDIF.
+        ELSEIF STREET_SW = 'y'.
+           MOVE LFA1-NAME3 TO VENDOR-DELIVLOC.
+        ELSE.
+           MOVE LFA1-NAME3 TO VENDOR-TOWN.
+           MOVE 'y' TO TOWN_SW.
+        ENDIF.
+      ENDIF.
+      IF LFA1-NAME2 > SPACE.
+        IF TOWN_SW = 'y'.
+          IF STREET_SW = 'y'.
+             MOVE LFA1-NAME2 TO VENDOR-DELIVLOC.
+          ELSE.
+             MOVE LFA1-NAME2 TO VENDOR-STREET.
+             MOVE 'y' TO STREET_SW.
+          ENDIF.
+        ELSEIF STREET_SW = 'y'.
+           MOVE LFA1-NAME2 TO VENDOR-DELIVLOC.
+        ELSE.
+           MOVE LFA1-NAME2 TO VENDOR-TOWN.
+           MOVE 'y' TO TOWN_SW.
+        ENDIF.
+      ENDIF.
+      IF CDHDR-CHANGE_IND = 'U'.
+         MOVE 'C' TO VENDOR-ACTIONCD.
+      ELSEIF CDHDR-CHANGE_IND = 'D'.
+         MOVE 'D' TO VENDOR-ACTIONCD.
+      ELSEIF CDHDR-CHANGE_IND = 'I'.
+         MOVE 'A' TO VENDOR-ACTIONCD.
+      ENDIF.
+      TRANSFER VENDOR TO PAYEES LENGTH 201.
+    ENDSELECT.
+  ENDSELECT.
+ENDSELECT.
+SELECT SINGLE FOR UPDATE * FROM TVARV
+                  WHERE NAME = 'ZAP_ZFAPI008_LAST_RUN_DATE'
+                  AND TYPE = 'P' AND NUMB = 0000.
+MOVE SY-DATUM TO TVARV-LOW.
+MODIFY TVARV.
+CLOSE DATASET PAYEES.
+*

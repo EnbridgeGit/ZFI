@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZF</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>FI Messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Program needs input either from screen or through table ZF006</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Year &amp; in the posting date is unrealistic</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Month &amp; in the posting date is unrealistic</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Posting key &amp; not allowed.  Choose 40 or 50.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Error in creating batch input session &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Allocation type &amp; is not valid.  Choose P, H, S</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Problem. &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Cost Centre is required.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Cost Element is required.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZF</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Please enter a period !</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

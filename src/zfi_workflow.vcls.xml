@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_VCLS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VCLDIR>
+    <VCLNAME>ZFI_WORKFLOW</VCLNAME>
+    <TEXT>Workflow Maintainance</TEXT>
+   </VCLDIR>
+   <VLCSTRUC_TAB>
+    <V_VCLSTRUC>
+     <VCLNAME>ZFI_WORKFLOW</VCLNAME>
+     <OBJECT>ZFIMV_FCALENDAR</OBJECT>
+     <OBJECTTEXT>Factory Calendar</OBJECTTEXT>
+     <PREDOBJECT>ZFIMV_FCALENDAR</PREDOBJECT>
+     <DEPENDENCY>R</DEPENDENCY>
+     <OBJPOS>01</OBJPOS>
+     <OBJLEVEL>01</OBJLEVEL>
+     <STARTOBJ>X</STARTOBJ>
+    </V_VCLSTRUC>
+   </VLCSTRUC_TAB>
+   <VCLSTRUDEP_TAB>
+    <V_VCLSTDEP>
+     <VCLNAME>ZFI_WORKFLOW</VCLNAME>
+     <OBJECT>ZFIMV_FCALENDAR</OBJECT>
+     <PREDOBJECT>ZFIMV_FCALENDAR</PREDOBJECT>
+    </V_VCLSTDEP>
+   </VCLSTRUDEP_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

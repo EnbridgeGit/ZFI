@@ -1,0 +1,956 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZFR_AUDIT_EXTRACT</NAME>
+    <SUBC>1</SUBC>
+    <RSTAT>K</RSTAT>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>ZFR_AUDIT_EXTRACT</PROGRAM>
+      <SCREEN>1001</SCREEN>
+      <LANGUAGE>E</LANGUAGE>
+      <DESCRIPT>ALV container screen</DESCRIPT>
+      <TYPE>N</TYPE>
+      <NEXTSCREEN>1001</NEXTSCREEN>
+      <LINES>027</LINES>
+      <COLUMNS>172</COLUMNS>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+      <RPY_DYCATT>
+       <TYPE>CUST_CTRL</TYPE>
+       <NAME>GC_CONTAINER</NAME>
+       <ELEMENT_OF>SCREEN</ELEMENT_OF>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>172</LENGTH>
+       <HEIGHT>027</HEIGHT>
+       <C_RESIZE_V>X</C_RESIZE_V>
+       <C_RESIZE_H>X</C_RESIZE_H>
+       <C_LINE_MIN>013</C_LINE_MIN>
+       <C_COLN_MIN>086</C_COLN_MIN>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+     <FLOW_LOGIC>
+      <RPY_DYFLOW>
+       <LINE>PROCESS BEFORE OUTPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE status_1001.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE display_alv.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW/>
+      <RPY_DYFLOW>
+       <LINE>PROCESS AFTER INPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE user_command_1001.</LINE>
+      </RPY_DYFLOW>
+     </FLOW_LOGIC>
+    </item>
+   </DYNPROS>
+   <CUA>
+    <ADM>
+     <ACTCODE>000001</ACTCODE>
+     <MENCODE>000010</MENCODE>
+     <PFKCODE>000001</PFKCODE>
+    </ADM>
+    <STA>
+     <RSMPE_STAT>
+      <CODE>ZEXTRACT</CODE>
+      <MODAL>D</MODAL>
+      <ACTCODE>000001</ACTCODE>
+      <PFKCODE>000001</PFKCODE>
+      <BUTCODE>0001</BUTCODE>
+      <INT_NOTE>GUI status for table extract report</INT_NOTE>
+     </RSMPE_STAT>
+    </STA>
+    <FUN>
+     <RSMPE_FUNT>
+      <CODE>BACK</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Back</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>CANCEL</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_CANCEL</TEXT_NAME>
+      <ICON_ID>@0W@</ICON_ID>
+      <FUN_TEXT>Cancel</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>EXIT</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Exit</FUN_TEXT>
+     </RSMPE_FUNT>
+    </FUN>
+    <MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>01</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;01&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>02</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;02&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>03</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;03&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>04</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;04&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>05</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;05&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>06</NO>
+      <REF_TYPE>S</REF_TYPE>
+      <REF_CODE>&lt;S1&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>07</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;06&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>08</NO>
+      <REF_TYPE>S</REF_TYPE>
+      <REF_CODE>&lt;S1&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>09</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;09&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>10</NO>
+      <REF_TYPE>S</REF_TYPE>
+      <REF_CODE>&lt;S1&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>11</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;10&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000006</CODE>
+      <NO>12</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;11&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>01</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;12&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>02</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;13&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>03</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;24&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>04</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;14&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>05</NO>
+      <REF_TYPE>S</REF_TYPE>
+      <REF_CODE>&lt;S1&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>06</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;16&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>07</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;17&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>08</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;18&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>09</NO>
+      <REF_TYPE>S</REF_TYPE>
+      <REF_CODE>&lt;S1&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>10</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;26&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>11</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;27&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>12</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;20&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>13</NO>
+      <REF_TYPE>S</REF_TYPE>
+      <REF_CODE>&lt;S1&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000007</CODE>
+      <NO>14</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;22&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000008</CODE>
+      <NO>01</NO>
+      <REF_TYPE>S</REF_TYPE>
+      <REF_CODE>&lt;S1&gt;</REF_CODE>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000008</CODE>
+      <NO>02</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>&lt;23&gt;</REF_CODE>
+     </RSMPE_MEN>
+    </MEN>
+    <MTX>
+     <RSMPE_MNLT>
+      <CODE>000006</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>&lt;Object&gt;</TEXT>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000007</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Edit</TEXT>
+      <PATH>E</PATH>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000008</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Goto</TEXT>
+      <PATH>G</PATH>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000009</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Extras</TEXT>
+      <PATH>A</PATH>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000010</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Environment</TEXT>
+      <PATH>V</PATH>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+    </MTX>
+    <ACT>
+     <RSMPE_ACT>
+      <CODE>000001</CODE>
+      <NO>01</NO>
+      <MENUCODE>000006</MENUCODE>
+     </RSMPE_ACT>
+     <RSMPE_ACT>
+      <CODE>000001</CODE>
+      <NO>02</NO>
+      <MENUCODE>000007</MENUCODE>
+     </RSMPE_ACT>
+     <RSMPE_ACT>
+      <CODE>000001</CODE>
+      <NO>03</NO>
+      <MENUCODE>000008</MENUCODE>
+     </RSMPE_ACT>
+     <RSMPE_ACT>
+      <CODE>000001</CODE>
+      <NO>04</NO>
+      <MENUCODE>000009</MENUCODE>
+     </RSMPE_ACT>
+     <RSMPE_ACT>
+      <CODE>000001</CODE>
+      <NO>05</NO>
+      <MENUCODE>000010</MENUCODE>
+     </RSMPE_ACT>
+    </ACT>
+    <PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>03</PFNO>
+      <FUNCODE>BACK</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>12</PFNO>
+      <FUNCODE>CANCEL</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>15</PFNO>
+      <FUNCODE>EXIT</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+    </PFK>
+    <SET>
+     <RSMPE_STAF>
+      <STATUS>ZEXTRACT</STATUS>
+      <FUNCTION>BACK</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>ZEXTRACT</STATUS>
+      <FUNCTION>CANCEL</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>ZEXTRACT</STATUS>
+      <FUNCTION>EXIT</FUNCTION>
+     </RSMPE_STAF>
+    </SET>
+    <DOC>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>A</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <MODAL>D</MODAL>
+      <NORM>X</NORM>
+      <INT_NOTE>GUI status for table extract report</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>P</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <MODAL>D</MODAL>
+      <INT_NOTE>GUI status for table extract report</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>B</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <SUB_CODE>0001</SUB_CODE>
+      <MODAL>D</MODAL>
+      <INT_NOTE>GUI status for table extract report</INT_NOTE>
+     </RSMPE_ATRT>
+    </DOC>
+    <TIT>
+     <RSMPE_TITT>
+      <CODE>ZTITLE1</CODE>
+      <TEXT>Audit Extract Report</TEXT>
+     </RSMPE_TITT>
+    </TIT>
+   </CUA>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>E01</KEY>
+     <ENTRY>No data found</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E02</KEY>
+     <ENTRY>Field delimiter not required for this file type</ENTRY>
+     <LENGTH>47</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H01</KEY>
+     <ENTRY>Enter Table Name</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H02</KEY>
+     <ENTRY>Select Options</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H03</KEY>
+     <ENTRY>Filter table values</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>H04</KEY>
+     <ENTRY>Run Options</ENTRY>
+     <LENGTH>11</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>S01</KEY>
+     <ENTRY>Mail Sent</ENTRY>
+     <LENGTH>9</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T01</KEY>
+     <ENTRY>Email Audit Extract</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T02</KEY>
+     <ENTRY>Extract</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T03</KEY>
+     <ENTRY>Hi,</ENTRY>
+     <LENGTH>3</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T04</KEY>
+     <ENTRY>Please find the attached extract for</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T05</KEY>
+     <ENTRY>table.</ENTRY>
+     <LENGTH>6</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T06</KEY>
+     <ENTRY>Thank You.</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T07</KEY>
+     <ENTRY>Table Extract</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T08</KEY>
+     <ENTRY>Please select a destination folder.</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T09</KEY>
+     <ENTRY>File</ENTRY>
+     <LENGTH>4</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Audit Extract Report</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CHDR1</KEY>
+     <ENTRY>Output Column Field Names</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CHDR2</KEY>
+     <ENTRY>Output Column Field Names</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DPBC</KEY>
+     <ENTRY>Documents per File</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DPBC1</KEY>
+     <ENTRY>Documents per Batch</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_EMAIL</KEY>
+     <ENTRY>Email ID</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FDLM1</KEY>
+     <ENTRY>File Delimiter</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FDLM2</KEY>
+     <ENTRY>File Delimiter</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FEXT1</KEY>
+     <ENTRY>File Extension</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FEXT2</KEY>
+     <ENTRY>File Extension</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FIELD1</KEY>
+     <ENTRY>Field1 Name</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FIELD2</KEY>
+     <ENTRY>Field2 Name</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FIELD3</KEY>
+     <ENTRY>Field3 Name</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FNAM1</KEY>
+     <ENTRY>File Name</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FPTH1</KEY>
+     <ENTRY>File/Application Server Path</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_TABLE</KEY>
+     <ENTRY>Table Name</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>RB_ALV</KEY>
+     <ENTRY>Display extract</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>RB_MAIL</KEY>
+     <ENTRY>Mail extract file</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>RB_XLS</KEY>
+     <ENTRY>Download extract file</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BUDAT</KEY>
+     <ENTRY>Posting Date</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BUKRS1</KEY>
+     <ENTRY>Company Code</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FIELD1</KEY>
+     <ENTRY>Value</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FIELD2</KEY>
+     <ENTRY>Value</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FIELD3</KEY>
+     <ENTRY>Value</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_GJAHR1</KEY>
+     <ENTRY>Fiscal Year</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MONAT1</KEY>
+     <ENTRY>Fiscal Period</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_POSNR</KEY>
+     <ENTRY>Delivery Item</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_VBELN</KEY>
+     <ENTRY>Delivery</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZFR_AUDIT_EXTRACT</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00061</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFR_AUDIT_EXTRACT</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This tool will allow the user with the opportunity to receive the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>extract for Audit related tables.The extract can be obtained as online</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>report and can also be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>downloaded to local PC as excel or other types of file. This program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>also allows users to send mails to the specific person and attaching the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>table extract in mail.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>If no mail recipient is specified mail is sent to the person who</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>executes this program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>NA</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>NA</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Table Name</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>              This is mandatory field on screen.User can select the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>table from F4 dropdown as shown below</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>              or can enter the table name manually .This is the table</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>for which user expects to get the extract.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>     Company Code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>     Fiscal Year</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>     Fiscal Period</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            If filter criteria needs to be specified it can either be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>done using the below known fields Company Code/</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>           Fiscal Year/Period if they are present in the table for which</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>extract is to be downloaded.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            Field1 Name</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>           Value</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>           Field2 Name</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>          Value</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>          Field3 Name</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>          Value</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Display Report: ALV report output will be displayed with the table</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>extract values</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Download extract file: Download Report in Txt or any other format as</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>specified in selection</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            File path:Specify the file path where file is to be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>downloaded</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            File Name: Specify File Name</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            File Extension: Specify extension for file(xls/txt..etc)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            File Delimiter: Do no specify anything here for excel file.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            Output Column Names: If file header is required check</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>this.(by default it is checked)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            Mail Extract file:Email the extract file in txt format to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>specified user or to the user who executes the file.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>             File Extension: Specify extension for file(xls/txt..etc)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            File Delimiter: Specify the file delimiter. By default (|).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>             Email ID:Specify the mail ID whom the extract file will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sent.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>                            If not specified mail will come to you as</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>you are executing the program.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>            Documents per batch: No of records to be sent for file</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>specifically for very big tables.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>                                                    Here multiple mails</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will be sent to user.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>             Output Column Names: If file header is required check</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>this.(by default it is checked)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>NA</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>In Foreground mode :ALV report or file downloaded to desktop&lt;(&gt;,&lt;)&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>In background mode :ALV spool or mails sent with extract file</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>attachment.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZNFAP006</NAME>
+    <SQLX>R</SQLX>
+    <DBAPL>F</DBAPL>
+    <DBNA>PY</DBNA>
+    <CLAS>FORD</CLAS>
+    <SUBC>1</SUBC>
+    <APPL>F</APPL>
+    <RSTAT>P</RSTAT>
+    <RLOAD>D</RLOAD>
+    <LDBNAME>PYF</LDBNAME>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>520</KEY>
+     <ENTRY>(Form summary section)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>525</KEY>
+     <ENTRY>(Disk accompanying sheet)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>704</KEY>
+     <ENTRY>See p/adv. note</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Payment Medium (Canada) - DME Bank Transfers/Collection in Stand. 005</ENTRY>
+     <LENGTH>69</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ANZP</KEY>
+     <ENTRY>Number of sample printouts</ENTRY>
+     <LENGTH>34</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BELP</KEY>
+     <ENTRY>Payment document validation</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_CRLF</KEY>
+     <ENTRY>Line feed</ENTRY>
+     <LENGTH>22</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_CRNO</KEY>
+     <ENTRY>Creation number</ENTRY>
+     <LENGTH>28</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_DTYP</KEY>
+     <ENTRY>Output medium</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ESPR</KEY>
+     <ENTRY>Texts in recipient&apos;s language</ENTRY>
+     <LENGTH>37</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ISOC</KEY>
+     <ENTRY>Currency in ISO code</ENTRY>
+     <LENGTH>28</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_MAXP</KEY>
+     <ENTRY>No.of items in payment summary</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_RETR</KEY>
+     <ENTRY>Re-Trans. without new Cr.No.</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_UNIX</KEY>
+     <ENTRY>File name (for DME)</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XDTA</KEY>
+     <ENTRY>Data medium exchange</ENTRY>
+     <LENGTH>28</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_HBKI</KEY>
+     <ENTRY>House bank</ENTRY>
+     <LENGTH>18</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_HKTI</KEY>
+     <ENTRY>Account ID</ENTRY>
+     <LENGTH>18</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_UZAW</KEY>
+     <ENTRY>Payment method supplement</ENTRY>
+     <LENGTH>33</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_VBLN</KEY>
+     <ENTRY>Payment document number</ENTRY>
+     <LENGTH>31</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_WAER</KEY>
+     <ENTRY>Currency</ENTRY>
+     <LENGTH>25</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_ZAWE</KEY>
+     <ENTRY>Payment method</ENTRY>
+     <LENGTH>22</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>520</KEY>
+       <ENTRY>(Formularabschluß)</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>525</KEY>
+       <ENTRY>(Diskettenbegleitzettel)</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>704</KEY>
+       <ENTRY>Siehe Avis</ENTRY>
+       <LENGTH>15</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Zahlungsträger Kanada - DTA Überweisungen/Bankeinzug im Standard 005</ENTRY>
+       <LENGTH>68</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ANZP</KEY>
+       <ENTRY>Anzahl Probedrucke</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_AVIS</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BEGL</KEY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BELP</KEY>
+       <ENTRY>Zahlungsbeleg-Verprobung</ENTRY>
+       <LENGTH>33</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_CRLF</KEY>
+       <ENTRY>Zeilenvorschub</ENTRY>
+       <LENGTH>22</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_CRNO</KEY>
+       <ENTRY>Creation number</ENTRY>
+       <LENGTH>28</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_DTYP</KEY>
+       <ENTRY>Ausgabemedium</ENTRY>
+       <LENGTH>31</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ESPR</KEY>
+       <ENTRY>Texte in Empfängersprache</ENTRY>
+       <LENGTH>37</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ISOC</KEY>
+       <ENTRY>Währung in ISO-Code</ENTRY>
+       <LENGTH>27</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_MAXP</KEY>
+       <ENTRY>Postenzahl Begleitliste</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_PRIA</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_PRIB</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_PRIW</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_RETR</KEY>
+       <ENTRY>Re-Trans. without new Cr.No.</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFA</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFB</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFW</KEY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_UNIX</KEY>
+       <ENTRY>Filename (bei DTA)</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XDTA</KEY>
+       <ENTRY>Datenträgeraustausch</ENTRY>
+       <LENGTH>28</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_HBKI</KEY>
+       <ENTRY>Hausbank</ENTRY>
+       <LENGTH>16</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_HKTI</KEY>
+       <ENTRY>Konto-Id</ENTRY>
+       <LENGTH>16</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_UZAW</KEY>
+       <ENTRY>Zahlwegzusatz</ENTRY>
+       <LENGTH>21</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_VBLN</KEY>
+       <ENTRY>Zahlungsbelegnummer</ENTRY>
+       <LENGTH>27</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_WAER</KEY>
+       <ENTRY>Währung</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_ZAWE</KEY>
+       <ENTRY>Zahlweg</ENTRY>
+       <LENGTH>16</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

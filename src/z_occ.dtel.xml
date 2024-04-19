@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>Z_OCC</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>KOSTL</DOMNAME>
+    <HEADLEN>18</HEADLEN>
+    <SCRLEN1>09</SCRLEN1>
+    <SCRLEN2>18</SCRLEN2>
+    <SCRLEN3>18</SCRLEN3>
+    <DDTEXT>Offset Cost Centre</DDTEXT>
+    <REPTEXT>Offset Cost Centre</REPTEXT>
+    <SCRTEXT_S>Offset CC</SCRTEXT_S>
+    <SCRTEXT_M>Offset Cost Centre</SCRTEXT_M>
+    <SCRTEXT_L>Offset Cost Centre</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>WBS Element Validation</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZPS_WBS_VALIDATETOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZPS_WBS_VALIDATE</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZPS_WBS_VALIDATE</FUNCNAME>
+     <SHORT_TEXT>WBS Element Validation</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>INPUT</PARAMETER>
+       <TYP>CLIKE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OUTPUT</PARAMETER>
+       <TYP>CLIKE</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>PSPNR</PARAMETER>
+       <TYP>PS_POSNR</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>OBJNR</PARAMETER>
+       <TYP>J_OBJNR</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>BAPIRET2</PARAMETER>
+       <TYP>BAPIRET2</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>WBS_TYPE_INVALID</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>WBS_FORMAT_INVALID</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>WBS_DOES_NOT_EXIST</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>INPUT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OUTPUT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PSPNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>WBS Element</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>BAPIRET2</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WBS_TYPE_INVALID</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>WBS Element type is invalid</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WBS_FORMAT_INVALID</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>WBS Element format is invalid</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WBS_DOES_NOT_EXIST</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>WBS Element does not exist</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

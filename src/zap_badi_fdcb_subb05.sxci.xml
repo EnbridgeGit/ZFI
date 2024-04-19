@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SXCI" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SXCI>
+    <IMPLEMENTATION_DATA>
+     <IMP_NAME>ZAP_BADI_FDCB_SUBB05</IMP_NAME>
+     <TEXT>Implementation of IAP Fields to MIRO Invoices</TEXT>
+     <IMP_CLASS>ZCL_IM_AP_BADI_FDCB_SUBB05</IMP_CLASS>
+     <EXIT_NAME>BADI_FDCB_SUBBAS05</EXIT_NAME>
+     <INTER_NAME>IF_EX_BADI_FDCB_SUBBAS05</INTER_NAME>
+     <ACTIVE>X</ACTIVE>
+    </IMPLEMENTATION_DATA>
+    <SCREENS>
+     <item>
+      <EXIT_NAME>BADI_FDCB_SUBBAS05</EXIT_NAME>
+      <SCR_A_PROG>SAPLFDCB</SCR_A_PROG>
+      <SCR_A_NUM>0010</SCR_A_NUM>
+      <SCR_A_SSCR>SUBBAS05</SCR_A_SSCR>
+      <SCR_P_PROG>SAPLZAP_BADI_FDCB_BAS_FIELDS</SCR_P_PROG>
+      <SCR_P_NUM>0900</SCR_P_NUM>
+      <IMP_NAME>ZAP_BADI_FDCB_SUBB05</IMP_NAME>
+      <SPRSL>E</SPRSL>
+      <SCR_TEXT>Enhancement 5 Vendor Basic Data</SCR_TEXT>
+     </item>
+     <item>
+      <EXIT_NAME>BADI_FDCB_SUBBAS05</EXIT_NAME>
+      <SCR_A_PROG>SAPLFDCB</SCR_A_PROG>
+      <SCR_A_NUM>0510</SCR_A_NUM>
+      <SCR_A_SSCR>SUBBAS05</SCR_A_SSCR>
+      <IMP_NAME>ZAP_BADI_FDCB_SUBB05</IMP_NAME>
+      <SPRSL>E</SPRSL>
+      <SCR_TEXT>Enhancement 5 Customer Basic Data</SCR_TEXT>
+     </item>
+    </SCREENS>
+   </SXCI>
+  </asx:values>
+ </asx:abap>
+</abapGit>

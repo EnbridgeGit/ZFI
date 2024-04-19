@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZFI_WORKFLOW</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>&amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>One Level Approval</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Two Level of Approval</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>DOA Fails</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>DOA Table is not maintained for employee: &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Please enter reason of Rejection</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>GL Document &amp;1 Approved by &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Business Partner &amp;1 is Rejected by &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Please provide a reason for rejection.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>You are not allowed to approve Trip &amp;1 for &amp;2 due to DOA Validity</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Please enter a user to forward this to.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Work item forwarded to user: &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>No Supervisor defined for user: &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>No Personal Number maintained for User &amp;1 and Sub Type 0001</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>GL DOA Table is not maintained for User &amp;1 at Level &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Issue with Event, Please Try Again!!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Financial Transaction send to next level of Approval</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>No Authorization to View</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Business Partner &amp;1 is Approved and Released by &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Business Partner &amp;1 is not Released by &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Workitem can not be forwarded to subordinate &amp;1 of user &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>There is Issue with the event; Please Try again</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>You can not forward a workitem to yourself</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>You can not forward a work item to the creator: &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Approval is not possible without any attachment document in the Trip &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>You are Creator of this Financial Transaction &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>027</MSGNR>
+     <TEXT>Invalid DOA limit for user &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>028</MSGNR>
+     <TEXT>Invalid DOA limit, Workflow is Active for the Approval</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>029</MSGNR>
+     <TEXT>Invalid Route Code Owner</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Route Code Required for Field REF3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Same user &amp;1 can not Park and Post &amp;2 FI Document</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Invoice initiator can not be the final approver.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>033</MSGNR>
+     <TEXT>You can&apos;t be final Approver for Posting</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>034</MSGNR>
+     <TEXT>Workitem can not be forwarded to the route code owner.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>035</MSGNR>
+     <TEXT>Insufficient DOA</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>036</MSGNR>
+     <TEXT>List of work items in your Workflow inbox</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>037</MSGNR>
+     <TEXT>Route code required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>038</MSGNR>
+     <TEXT>Same user &amp;1 can&apos;t Park and Post &amp;2 FI Document</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>039</MSGNR>
+     <TEXT>Financial Transaction can&apos;t settle manually</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>040</MSGNR>
+     <TEXT>DOA Table is not maintained for Employee &amp;1 and Doc Type &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>041</MSGNR>
+     <TEXT>Same user cannot change and post the document</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>042</MSGNR>
+     <TEXT>Change and Settlement of fin. tran. can&apos;t be done by the same user</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>043</MSGNR>
+     <TEXT>Settlement of financial transaction by creator is not allowed</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>044</MSGNR>
+     <TEXT>Document has not been completed.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>045</MSGNR>
+     <TEXT>Document has been completed, please forward to an approver.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>046</MSGNR>
+     <TEXT>Route Code Owner &amp;1 does not exist in this SAP instance.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>048</MSGNR>
+     <TEXT>Insufficient DOA</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>049</MSGNR>
+     <TEXT>List of work items in your Workflow inbox</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>050</MSGNR>
+     <TEXT>Internal failure</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>051</MSGNR>
+     <TEXT>Time out</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>052</MSGNR>
+     <TEXT>Destination Communication Failure</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>053</MSGNR>
+     <TEXT>Destination System Failure</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>054</MSGNR>
+     <TEXT>Update failure</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>055</MSGNR>
+     <TEXT>No update authority</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>056</MSGNR>
+     <TEXT>Other error</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>057</MSGNR>
+     <TEXT>User &amp;1 First name or Last Name is not maintained in &amp;2 System</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>058</MSGNR>
+     <TEXT>Work Item has been deleted</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>059</MSGNR>
+     <TEXT>Payment Method is required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>060</MSGNR>
+     <TEXT>Approver &amp;1 does not exist in this SAP instance.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI_WORKFLOW</ARBGB>
+     <MSGNR>068</MSGNR>
+     <TEXT>Settlement cannot be completed; Transaction &amp;1 in Company &amp;2 not released</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

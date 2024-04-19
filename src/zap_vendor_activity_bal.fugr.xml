@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Vendor Activity and Balance Reporting</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZAP_VENDOR_ACTIVITY_BALF01</SOBJ_NAME>
+    <SOBJ_NAME>LZAP_VENDOR_ACTIVITY_BALTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZAP_VENDOR_ACTIVITY_BAL</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZAP_VENDOR_ACTIVITY_BALANCE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Vendor Activity and Balance Reporting</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>S_LIFNR</PARAMETER>
+       <TYP>FAGL_RANGE_T_LIFNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>S_BUKRS</PARAMETER>
+       <TYP>EBPP_RANGE_T_BUKRS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>S_ERDAT</PARAMETER>
+       <TYP>ACC_T_RA_DATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IM_CPUDT</PARAMETER>
+       <TYP>ACC_T_RA_DATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IM_LOEVM</PARAMETER>
+       <TYP>LOEVM_X</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IM_SPERR</PARAMETER>
+       <TYP>SPERB_X</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>INACTIVE_VENDORS</PARAMETER>
+       <TYP>NUM6</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ACTIVE_VENDORS</PARAMETER>
+       <TYP>NUM6</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>NEW_VENDORS</PARAMETER>
+       <TYP>NUM6</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>OUTPUT_TAB</PARAMETER>
+       <TYP>ZAP_VEN_ACT_BAL_T</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>S_LIFNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vendors</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>S_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Company Codes</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>S_ERDAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>changed Dates</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IM_CPUDT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Document Entry Date</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IM_LOEVM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Central Deletion Flag for Master Record</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IM_SPERR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Central posting block</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>INACTIVE_VENDORS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Numerical of inactive Vendors</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACTIVE_VENDORS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Numerical of active Vendors</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NEW_VENDORS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>New Vendors</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OUTPUT_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Output table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

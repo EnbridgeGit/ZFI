@@ -1,0 +1,1030 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZFGLR001</NAME>
+    <SUBC>1</SUBC>
+    <APPL>G</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>H</ID>
+     <KEY>001</KEY>
+     <ENTRY>ACCOUNT NUMBER        ACCOUNT DESC.          SUBTOTAL      TOTAL</ENTRY>
+     <LENGTH>64</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>CAPITAL STOCK</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>RETAINED EARNINGS</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>OTHER LIABILITIES</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>CUSTOMER DEPOSITS</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>UNCLAIMED CHEQUES</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>DEF. INCOME TAX LONG TERM</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>DEF. INCOME TAXES CURRENT</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>LONG TERM DEBT(L.T.D.)</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>CURRENT PORTION -  L.T.D.</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>BANK INDEBTEDNESS</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>OUTSTANDING CHEQUES</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>COMMERCIAL NOTES PAYABLE</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>PREPAID INTEREST</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>DEFERRED EXCHANGE</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>015</KEY>
+     <ENTRY>NET PROPERTY, PLANT, EQUIP.</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>016</KEY>
+     <ENTRY>DEF. ISSUE COST PREF&apos;D SHR.</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>017</KEY>
+     <ENTRY>UNAMORIT&apos; DEBT ISSUE COSTS</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>018</KEY>
+     <ENTRY>IMPRVMNT. TO LEASED PREMISE</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>019</KEY>
+     <ENTRY>DEFERRED SUNDRY EXPENSE</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>100</KEY>
+     <ENTRY>PREVIOUS YEAR</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>101</KEY>
+     <ENTRY>REPORTING DATE</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>102</KEY>
+     <ENTRY>COMPARATIVE DATE</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>200</KEY>
+     <ENTRY>REPORTING   PERIOD/YEAR</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>201</KEY>
+     <ENTRY>COMPARISON  PERIOD/YEAR</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>202</KEY>
+     <ENTRY>DEFAULT (CURRENT PERIOD/YEAR)</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>203</KEY>
+     <ENTRY>DEFAULT (LAST PERIOD OF PREV. YEAR)</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>204</KEY>
+     <ENTRY>OUTSTANDING CHEQUES                (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>205</KEY>
+     <ENTRY>COMPANY CODE</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>206</KEY>
+     <ENTRY>$</ENTRY>
+     <LENGTH>1</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>207</KEY>
+     <ENTRY>REPORTING FIGURES</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>208</KEY>
+     <ENTRY>COMPARATIVE FIGURES</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>209</KEY>
+     <ENTRY>TAXABLE CAPITAL SUBTOTAL  &gt;&gt;&gt;</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>210</KEY>
+     <ENTRY>GROUP TOTAL &gt;&gt;</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>211</KEY>
+     <ENTRY>&lt;COMPARATIVE</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>212</KEY>
+     <ENTRY>&lt;REPORTING</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>213</KEY>
+     <ENTRY>TAXABLE CAPITAL</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>214</KEY>
+     <ENTRY>BOOK VALUES</ENTRY>
+     <LENGTH>11</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>215</KEY>
+     <ENTRY>CAPITALIZED LEASE COSTS IN NBV     (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>216</KEY>
+     <ENTRY>CAPITALIZED LEASE COSTS - Acc Dep. (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>217</KEY>
+     <ENTRY>AMOUNTS DEDUCTED IN EXCESS         (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>218</KEY>
+     <ENTRY>COST OF LAND IN NBV                (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>219</KEY>
+     <ENTRY>INTEREST DURING CONSTRUCTION INCLUDED IN LAND   (ENTER VALUES)</ENTRY>
+     <LENGTH>62</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>220</KEY>
+     <ENTRY>DEFERRED RATE HEARING COSTS        (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>221</KEY>
+     <ENTRY>NET BOOK VALUE FIXED ASSETS</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>222</KEY>
+     <ENTRY>TOTAL BOOK VALUES</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>223</KEY>
+     <ENTRY>DEFERRED PENSION</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>224</KEY>
+     <ENTRY>UNAMORT&apos; DISCOUNT DEBT ISS.</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>226</KEY>
+     <ENTRY>CAP&apos;LIZED LEASE COSTS - NBV</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>227</KEY>
+     <ENTRY>CAP&apos;LIZED LEASE COSTS - ACC</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>228</KEY>
+     <ENTRY>INTEREST DURING CONSTRUCT.</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>229</KEY>
+     <ENTRY>AMOUNT DEDUCTED IN EXCESS</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>230</KEY>
+     <ENTRY>TAXABLE CAPITAL BEFORE INVESTMENT ALLOWANCE</ENTRY>
+     <LENGTH>43</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>231</KEY>
+     <ENTRY>INVESTMENT WESTCOAST</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>232</KEY>
+     <ENTRY>EQUITY PICKUP MECAP</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>233</KEY>
+     <ENTRY>MORTGAGE RECEIVABLE</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>300</KEY>
+     <ENTRY>TAX VALUES</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>301</KEY>
+     <ENTRY>TAX VALUES                         (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>302</KEY>
+     <ENTRY>VCC                                (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>303</KEY>
+     <ENTRY>CEC                                (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>304</KEY>
+     <ENTRY>NOT AVAILABLE FOR USE              (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>305</KEY>
+     <ENTRY>NON DEDUCTIBLE CEC                 (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>306</KEY>
+     <ENTRY>RESOURCE PROPERTIES                (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>307</KEY>
+     <ENTRY>DEBT ISSUE COSTS                   (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>308</KEY>
+     <ENTRY>TOTAL TAX VALUES                   (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>309</KEY>
+     <ENTRY>TAXABLE CAPITAL BEFORE INVESTMENT ALLOWANCE    (ENTER VALUES)</ENTRY>
+     <LENGTH>61</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>310</KEY>
+     <ENTRY>TOTAL TAX VALUES</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>400</KEY>
+     <ENTRY>INVESTMENT ALLOWANCE</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>401</KEY>
+     <ENTRY>MORTGAGE RECEIVABLE                (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>402</KEY>
+     <ENTRY>INVESTMENT ALLOWANCE SUBTOTAL</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>500</KEY>
+     <ENTRY>TOTAL ASSETS</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>501</KEY>
+     <ENTRY>TOTAL ASSETS PER BAL. SHEET        (ENTER VALUES)</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>505</KEY>
+     <ENTRY>LESS AMT DEDUCTED IN EXCESS</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>506</KEY>
+     <ENTRY>TOTAL ASSETS</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>507</KEY>
+     <ENTRY>ONTARIO CAPITAL TAX</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>508</KEY>
+     <ENTRY>LESS ACCRUED CHARGES</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>AMP</KEY>
+     <ENTRY>@</ENTRY>
+     <LENGTH>1</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>AND</KEY>
+     <ENTRY>AND</ENTRY>
+     <LENGTH>3</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>ASO</KEY>
+     <ENTRY>AS OF</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>CLT</KEY>
+     <ENTRY>Client:</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>DTE</KEY>
+     <ENTRY>Date:</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>PGE</KEY>
+     <ENTRY>Page:</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>RPT</KEY>
+     <ENTRY>Report:</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>GL:   ONTARIO CAPITAL TAX REPORT                   ZFGLR001   GSPARTAL</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_CECCEC</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_CPLCAD</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_CPLCNB</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_DBISST</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_HEARCT</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_INTCON</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_LNDNBV</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_MORGRV</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_NONDED</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_NOTAVA</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_OUTSCQ</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_RESPRO</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_TAXVAL</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_TTASST</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>C_VCCVCC</KEY>
+     <ENTRY>COMPARATIVE PERIOD</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PERIOD1</KEY>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PERIOD2</KEY>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CECCEC</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CMCODE</KEY>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CPLCAD</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CPLCNB</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DBISST</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_HEARCT</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_INTCON</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_LNDNBV</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_MORGRV</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_NONDED</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_NOTAVA</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_OUTSCQ</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_RATE</KEY>
+     <ENTRY>CONSTANT RATE</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_RESPRO</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_TAXVAL</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_TTASST</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_VCCVCC</KEY>
+     <ENTRY>REPORTING PERIOD</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_ACCHRG</KEY>
+     <ENTRY>LESS ACCRUED CHARGES</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BKINDB</KEY>
+     <ENTRY>BANK INDEBTEDNESS</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_CAPSTK</KEY>
+     <ENTRY>CAPITAL STOCK</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_CMNTPY</KEY>
+     <ENTRY>COMMERCIAL NOTES PAYABLE</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_CRLGTD</KEY>
+     <ENTRY>CURRENT PORTION LONG TERM DEBT</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_CSTDPT</KEY>
+     <ENTRY>CUSTOMER DEPOSITS</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_DBISCT</KEY>
+     <ENTRY>UNAMORTIZED DEBT ISSUE COSTS</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_DEFEXC</KEY>
+     <ENTRY>DEFERRED EXCHANGE</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_DINCCR</KEY>
+     <ENTRY>DEFERRED INCOME TAXES CURRENT</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_DINCLT</KEY>
+     <ENTRY>DEFERRED INCOME TAX LONG TERM</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_DISCDI</KEY>
+     <ENTRY>UNAMORT. DISCT. ON DEBT ISSUE</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_DISCST</KEY>
+     <ENTRY>DEF.ISSUE COSTS PREFER. SHARED</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_EQPKMP</KEY>
+     <ENTRY>EQUITY PICKUP MECAP</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_IMPLHD</KEY>
+     <ENTRY>IMPROVEMENT TO LEASED PREMISES</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_INVWES</KEY>
+     <ENTRY>INVESTMENT WESTCOAST</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_LGTRMD</KEY>
+     <ENTRY>LONG TERM DEBT</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_NBFXAS</KEY>
+     <ENTRY>NET BOOK VALUE FIXED ASSETS</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_OTHRLB</KEY>
+     <ENTRY>OTHER LIABILITIES</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_PENSON</KEY>
+     <ENTRY>DEFERRED PENSION</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_PPDINT</KEY>
+     <ENTRY>PREPAID INTEREST</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_PTPLEQ</KEY>
+     <ENTRY>NET PROPERTY, PLANT, EQUIPMENT</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_RETNER</KEY>
+     <ENTRY>RETAINED EARNINGS</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_SUNDRY</KEY>
+     <ENTRY>DEFERRED SUNDRY EXPENSE</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_UCLMCQ</KEY>
+     <ENTRY>UNCLAIMED CHEQUES</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>YEAR1</KEY>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>YEAR2</KEY>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZFGLR001</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00038</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFGLR001</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>REPORT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,CENTRA-UNION GAS LIMITED -- ONTARIO CAPITAL TAX REPORT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DESCRIPTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,This report that will calculate and display the Ontario Capital Tax</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>totals from a range of accounts under their group headings. The report</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will show a list of two comparative dates specified by the user.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>INPUT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,The value for REPORTING PERIOD must be between the range of 1 and 12.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>If the period entered exceeds 12, then the report will execute with the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>value of 12 for the REPORTING DATE.  The default value for this field</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is the current period. The default for the YEAR is the current year.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,The value for COMPARATIVE PERIOD must be between the range of 1 and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>12. If the period entered exceeds 12, then the report will execute with</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the value of 12 for the COMPARATIVE DATE.  The default value for this</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>field is the last period (12).  The default for COMPARATIVE YEAR is the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>value of the previous year.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,COMPANY CODE default is set to UGL (Chatham)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,When entering account codes for each account, you DO NOT enter the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>decimal (e.g 200240 is correct ------ 2002.40 is NOT correct).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,In the fields were a value in required instead of a account number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the maximum value that can be entered is $999,999,999.99.  You do not</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>enter the dollar sign and comma. If the value is negative, then enter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the minus sign after the value (eg. 123456.99-).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,The report will be separated on different pages according to the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>individuals headings TAXABLE CAPITAL,  AMOUNTS DEDUCTED IN EXCESS, TAX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>VALUES, INVESTMENT ALLOWANCE.  The page starting with TAX VALUES will</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>including at the bottom a total for AMOUNTS DEDUCTED IN EXCESS and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>TAXABLE CAPITAL BEFORE INVESTMENT ALLOWANCE.  TOTAL ASSETS will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>displayed on the page starting with INVESTMENT ALLOWANCE.  At the end</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of the that page a total for INVESTMENT ALLOWANCE, TAXABLE CAPITAL and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ONTARIO CAPITAL TAX will be displayed.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,For each group the report will display the accounts entered, group</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>name, total for the REPORTING period and total for the COMPARATIVE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>period. The totals for the two periods will be separated by a vertical</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>line.  In the case of multiple accounts being entered, the account will</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>be listed underneath one another.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,Where a number of groups must be totalled together, the individual</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>group total will be displayed to the left first, then the whole group</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>total will be displayed to the right.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

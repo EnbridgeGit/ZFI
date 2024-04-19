@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function Group for Maximo RFC call</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_MAXIMO_RFCTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_MAXIMO_RFC</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFI_SAPPROJECTS2MAXIMO</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Function Group for Maximo RFC call</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>TRIGGER</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>INDICATOR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>DATA</PARAMETER>
+       <TYP>ZTT_FI_PERSONRESP</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_DATA_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>TRIGGER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character Field Length 1</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Person Responsible look up table for Maximo Interface</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_DATA_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No Data Found in Table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

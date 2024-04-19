@@ -1,0 +1,360 @@
+*&---------------------------------------------------------------------*
+*&  Include           ZFAPR001_WITHHOLD_TAX_UPD_TOP
+*&---------------------------------------------------------------------*
+
+
+TABLES: LFB1,                          "vendor master data
+        KNB1,                          "customer master data
+        T001,                          "company code data
+        BKPF,                          "document header
+        BSEG,                          "document table
+        BSAK,                          "vendor closed items
+        BSIK,                          "vendor open items
+        BSAD,                          "customer closed items
+        BSID,                          "customer open items
+        LFA1,                          "vendor master data
+        KNA1,                          "customer master data
+        RF05A,                         "hlp structure for SAPMF05A
+        T059Q,                         "ext. w/tax types
+        TAXCOM,                        "sales & distr. tax calculation
+        REGUS,                         "locked data
+        SSCRFIELDS.
+
+CONSTANTS:
+            GC_MODIF_ID_BSK   TYPE CHAR3          VALUE 'BSK',
+            GC_MODIF_ID_R10   TYPE CHAR3          VALUE 'R10',
+            GC_MODIF_ID_R20   TYPE CHAR3          VALUE 'R20',
+            GC_LINE_LENGTH    TYPE I              VALUE '72',
+            GC_BDC_TCODE(4)   TYPE C              VALUE  'FB09',
+            GC_BDC_MODE(1)    TYPE C              VALUE  'N',
+            GC_BDC_OPTION(1)  TYPE C              VALUE  'S',
+            GC_X(1)           TYPE C              VALUE  'X',
+            GC_E(1)           TYPE C              VALUE  'E',
+            GC_NO_1(1)        TYPE C              VALUE  '1',
+            GC_A(1)           TYPE C              VALUE  'A',
+            GC_WT_QSSHB(18)   TYPE C              VALUE  'ACWT_ITEM-WT_QSSHB'.
+
+TYPE-POOLS : ICON,
+             SLIS.
+
+* Types Definition
+TYPES: BEGIN OF SOURCE,
+         LINE LIKE RSSOURCE-LINE,
+       END OF SOURCE.
+
+TYPES: SOURCE_TABLE TYPE SOURCE OCCURS 0.
+
+TYPES : BEGIN OF TY_BSAK,
+         BUKRS    TYPE BSAK-BUKRS,
+         LIFNR    TYPE BSAK-LIFNR,
+         UMSKS    TYPE BSAK-UMSKS,
+         UMSKZ    TYPE BSAK-UMSKZ,
+         AUGDT    TYPE BSAK-AUGDT,
+         AUGBL    TYPE BSAK-AUGBL,
+         ZUONR    TYPE BSAK-ZUONR,
+         GJAHR    TYPE BSAK-GJAHR,
+         BELNR    TYPE BSAK-BELNR,
+         BUZEI    TYPE BSAK-BUZEI,
+         BUDAT    TYPE BSAK-BUDAT,
+        END OF TY_BSAK.
+
+TYPES: BEGIN OF TY_LFB1,
+         LIFNR    TYPE LFB1-LIFNR,
+         BUKRS    TYPE LFB1-BUKRS,
+       END OF TY_LFB1.
+
+TYPES: BEGIN OF TY_LFBW,
+        LIFNR     TYPE LFBW-LIFNR,
+        BUKRS     TYPE LFBW-BUKRS,
+        WITHT     TYPE LFBW-WITHT,
+        WT_SUBJCT TYPE LFBW-WT_SUBJCT,
+       END OF TY_LFBW.
+
+TYPES: BEGIN OF TY_WITH_ITEM,
+        BUKRS     TYPE WITH_ITEM-BUKRS,
+        BELNR     TYPE WITH_ITEM-BELNR,
+        GJAHR     TYPE WITH_ITEM-GJAHR,
+        BUZEI     TYPE WITH_ITEM-BUZEI,
+        WITHT     TYPE WITH_ITEM-WITHT,
+        WT_WITHCD TYPE WITH_ITEM-WT_WITHCD,
+        WT_QSSHH  TYPE WITH_ITEM-WT_QSSHH,
+        WT_QSSHB  TYPE WITH_ITEM-WT_QSSHB,
+       END OF TY_WITH_ITEM.
+
+TYPES: BEGIN OF TY_WITH_ITEM_BDC_FIELD,
+        BUKRS              TYPE WITH_ITEM-BUKRS,
+        BELNR              TYPE WITH_ITEM-BELNR,
+        GJAHR              TYPE WITH_ITEM-GJAHR,
+        BUZEI              TYPE WITH_ITEM-BUZEI,
+        WITHT              TYPE WITH_ITEM-WITHT,
+        WT_WITHCD          TYPE WITH_ITEM-WT_WITHCD,
+        WT_QSSHH           TYPE WITH_ITEM-WT_QSSHH,
+        WT_QSSHB           TYPE WITH_ITEM-WT_QSSHB,
+        WT_QSSHB_BDC_FIELD TYPE STRING,
+       END OF TY_WITH_ITEM_BDC_FIELD.
+
+
+TYPES : BEGIN OF TY_WITH_TAX_FINAL,
+         LIFNR              TYPE BSAK-LIFNR,
+         BELNR              TYPE BSAK-BELNR,
+         BUKRS              TYPE BSAK-BUKRS,
+         GJAHR              TYPE BSAK-GJAHR,
+         BUZEI              TYPE BSAK-BUZEI,
+         WT_WITHCD          TYPE WITH_ITEM-WT_WITHCD,
+         WT_QSSHH           TYPE WITH_ITEM-WT_QSSHH,
+         WT_QSSHB           TYPE WITH_ITEM-WT_QSSHB,
+         WT_QSSHB_BDC_FIELD TYPE STRING,
+        END OF TY_WITH_TAX_FINAL.
+
+TYPES : BEGIN OF TY_WITH_TAX_FINAL_TEMP,
+         LIFNR              TYPE BSAK-LIFNR,
+         BELNR              TYPE BSAK-BELNR,
+         BUKRS              TYPE BSAK-BUKRS,
+         GJAHR              TYPE BSAK-GJAHR,
+         BUZEI              TYPE BSAK-BUZEI,
+*         WT_WITHCD          TYPE WITH_ITEM-WT_WITHCD,
+*         WT_QSSHH           TYPE WITH_ITEM-WT_QSSHH,
+*         WT_QSSHB           TYPE WITH_ITEM-WT_QSSHB,
+*         WT_QSSHB_BDC_FIELD TYPE STRING,
+        END OF TY_WITH_TAX_FINAL_TEMP.
+
+
+TYPES : BEGIN OF TY_ALV_DISPLAY,
+         LIFNR     TYPE BSAK-LIFNR,
+         BELNR     TYPE BSAK-BELNR,
+         BUKRS     TYPE BSAK-BUKRS,
+         GJAHR     TYPE BSAK-GJAHR,
+         BUZEI     TYPE BSAK-BUZEI,
+         WT_WITHCD TYPE WITH_ITEM-WT_WITHCD,
+         WT_QSSHH  TYPE WITH_ITEM-WT_QSSHH,
+         WT_QSSHB  TYPE WITH_ITEM-WT_QSSHB,
+         MSG       TYPE STRING,
+        END OF TY_ALV_DISPLAY.
+
+* Data definition
+DATA: GV_CNT_BLK              TYPE I,
+      GV_TITLE(50)            TYPE C,
+      GV_FUNCTXT              TYPE SMP_DYNTXT,
+      GV_REPID                TYPE SY-REPID,
+      GV_EDITOR               TYPE REF TO CL_GUI_TEXTEDIT,
+      GV_CONTAINER            TYPE REF TO CL_GUI_CUSTOM_CONTAINER,
+      OK_CODE                 TYPE SY-UCOMM,
+      GSTR_ERROR_TEXT         TYPE STRING,
+      GV_REP                  TYPE SY-REPID,
+      GV_FIELD_COUNT          TYPE I,
+      GV_EVEN_ODD_CHK         TYPE I,
+      GC_TAX_ADD_CNT_CHR(2)   TYPE C,
+      GSTR_WT_QSSHB           TYPE STRING,
+      GV_BUKRS_BEFORE         TYPE WITH_ITEM-BUKRS,
+      GV_BELNR_BEFORE         TYPE WITH_ITEM-BELNR,
+      GV_GJAHR_BEFORE         TYPE WITH_ITEM-GJAHR,
+      GV_BUKRS_AFTER          TYPE WITH_ITEM-BUKRS,
+      GV_BELNR_AFTER          TYPE WITH_ITEM-BELNR,
+      GV_GJAHR_AFTER          TYPE WITH_ITEM-GJAHR.
+
+* Table definition
+DATA: GIT_BSAK                TYPE STANDARD TABLE OF TY_BSAK,
+      GIT_LFB1                TYPE STANDARD TABLE OF TY_LFB1,
+      GIT_LFBW                TYPE STANDARD TABLE OF TY_LFBW,
+      GIT_WITH_ITEM           TYPE STANDARD TABLE OF TY_WITH_ITEM,
+      GIT_WITH_ITEM_BDC_FIELD TYPE STANDARD TABLE OF TY_WITH_ITEM_BDC_FIELD,
+      GIT_WITH_TAX_FINAL      TYPE STANDARD TABLE OF TY_WITH_TAX_FINAL,
+      GIT_WITH_TAX_FINAL_TEMP TYPE STANDARD TABLE OF TY_WITH_TAX_FINAL_TEMP,
+      GIT_BDCDATA             TYPE STANDARD TABLE OF BDCDATA,
+      GIT_BDC_MSG_ERROR       TYPE STANDARD TABLE OF BDCMSGCOLL,
+      GIT_ALV_DISPLAY         TYPE STANDARD TABLE OF TY_ALV_DISPLAY,
+      GIT_FIELDCAT_DISPLAY    TYPE                   SLIS_T_FIELDCAT_ALV,
+      GIT_EXTAB               TYPE                   SLIS_T_EXTAB,
+      GIT_SORT                TYPE                   SLIS_T_SORTINFO_ALV,
+      GIT_TESTTABLE           TYPE                   SOURCE_TABLE.     " containing text
+
+*Work Area definition
+DATA: GWA_TEXTSTRUCT          TYPE SOURCE,           " to fill the following testtable
+      GWA_BSAK                TYPE TY_BSAK,
+      GWA_LFB1                TYPE TY_LFB1,
+      GWA_LFBW                TYPE TY_LFBW,
+      GWA_WITH_ITEM           TYPE TY_WITH_ITEM,
+      GWA_WITH_ITEM_BDC_FIELD TYPE TY_WITH_ITEM_BDC_FIELD,
+      GWA_WITH_TAX_FINAL      TYPE TY_WITH_TAX_FINAL,
+      GWA_WITH_TAX_FINAL_TEMP TYPE TY_WITH_TAX_FINAL_TEMP,
+      GWA_BDCDATA             TYPE BDCDATA,
+      GWA_BDC_MSG_ERROR       TYPE BDCMSGCOLL,
+      GWA_ALV_DISPLAY         TYPE TY_ALV_DISPLAY,
+      GWA_FIELDCAT_DISPLAY    TYPE SLIS_FIELDCAT_ALV,
+      GWA_LAYOUT              TYPE SLIS_LAYOUT_ALV,
+      GWA_ALV_PRINT           TYPE SLIS_PRINT_ALV,
+      GWA_EXTAB               TYPE SLIS_EXTAB,
+      GWA_SORT                TYPE SLIS_SORTINFO_ALV,
+      GWA_BDCOPTS             TYPE CTU_PARAMS.
+
+
+*----------------------------------------------------------------------*
+*                 Selection screen                                     *
+*----------------------------------------------------------------------*
+SELECTION-SCREEN BEGIN OF BLOCK BLK1 WITH FRAME ."TITLE text-054.
+
+PARAMETERS :    PRB_R10               RADIOBUTTON GROUP RAD1 USER-COMMAND CMD,
+                PRB_R20               RADIOBUTTON GROUP RAD1 ,
+                PRB_BSK               RADIOBUTTON GROUP RAD1 DEFAULT 'X'.
+
+SELECTION-SCREEN END OF BLOCK BLK1.
+
+SELECTION-SCREEN: BEGIN OF BLOCK BLK2 WITH FRAME TITLE TEXT-008.
+
+SELECT-OPTIONS: S_BUKRS               FOR BSAK-BUKRS MODIF ID BSK ,"OBLIGATORY,
+                S_LIFNR               FOR BSAK-LIFNR MODIF ID BSK ,
+                S_BELNR               FOR BSAK-BELNR MODIF ID BSK ,
+                S_BUDAT               FOR BSAK-BUDAT MODIF ID BSK .
+
+PARAMETERS:     P_GJAHR               TYPE GJAHR  MODIF ID BSK ,"OBLIGATORY,
+                P_TEST                AS CHECKBOX DEFAULT 'X' MODIF ID BSK .
+
+SELECTION-SCREEN: END OF BLOCK BLK2.
+
+
+**** Start of Selection Screen for RFWT0010 report
+
+SELECTION-SCREEN BEGIN OF BLOCK BLK3 WITH FRAME TITLE TEXT-001.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      VENDOR               AS CHECKBOX MODIF ID R10 .
+SELECTION-SCREEN                      COMMENT 4(15) TEXT-009 FOR FIELD VENDOR.
+SELECTION-SCREEN                      POSITION 30.
+SELECT-OPTIONS:  I_LIFNR              FOR LFB1-LIFNR MODIF ID R10 .
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      CUSTOMER             AS CHECKBOX MODIF ID R10 .
+SELECTION-SCREEN                      COMMENT 4(15) TEXT-010 FOR FIELD CUSTOMER.
+SELECTION-SCREEN                      POSITION 30.
+SELECT-OPTIONS:  I_KUNNR              FOR KNB1-KUNNR MODIF ID R10 .
+SELECTION-SCREEN END OF LINE.
+
+SELECT-OPTIONS:  I_BUKRS              FOR T001-BUKRS MODIF ID R10 ,"OBLIGATORY,
+                 I_BELNR              FOR BKPF-BELNR MODIF ID R10 ,
+                 I_GJAHR              FOR BKPF-GJAHR MODIF ID R10 ,
+                 I_BUDAT              FOR BKPF-BUDAT MODIF ID R10 .
+*SELECTION-SCREEN SKIP 1.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      NORMAL               AS CHECKBOX  MODIF ID R10 DEFAULT 'X'.
+SELECTION-SCREEN                      COMMENT 4(25) TEXT-013 FOR FIELD NORMAL.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      PARKED               AS CHECKBOX  MODIF ID R10 DEFAULT 'X'.
+SELECTION-SCREEN                      COMMENT 4(25) TEXT-014 FOR FIELD PARKED.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      RECURR               AS CHECKBOX MODIF ID R10  DEFAULT ' '.
+SELECTION-SCREEN                      COMMENT 4(25) TEXT-015 FOR FIELD RECURR.
+SELECTION-SCREEN END OF LINE.
+SELECT-OPTIONS:  I_DBELNR             FOR BKPF-BELNR MODIF ID R10 .
+SELECTION-SCREEN END OF BLOCK BLK3.
+
+SELECTION-SCREEN BEGIN OF BLOCK BLK4 WITH FRAME TITLE TEXT-002.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      TEST                 AS CHECKBOX  MODIF ID R10 DEFAULT 'X'.
+SELECTION-SCREEN                      COMMENT 4(15) TEXT-011 FOR FIELD TEST.
+SELECTION-SCREEN END OF LINE.
+
+*SELECTION-SCREEN                      SKIP 1.
+SELECTION-SCREEN                      COMMENT 1(70) TEXT-003.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      DA_TODAY             RADIOBUTTON GROUP DATE MODIF ID R10 .
+SELECTION-SCREEN                      COMMENT 4(30) TEXT-004 FOR FIELD DA_TODAY.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      DA_OTHER             RADIOBUTTON GROUP DATE MODIF ID R10 .
+SELECTION-SCREEN                      COMMENT 4(15) TEXT-005 FOR FIELD DA_OTHER.
+SELECTION-SCREEN                      POSITION 21.
+PARAMETERS:      DATE                 LIKE BKPF-BUDAT MODIF ID R10 .
+SELECTION-SCREEN END OF LINE.
+
+PARAMETERS:      NEW_TYPE             AS CHECKBOX DEFAULT 'X' MODIF ID R10 .
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN                      POSITION 5.
+PARAMETERS:      CODE1                RADIOBUTTON GROUP CODE MODIF ID R10 .
+SELECTION-SCREEN                      COMMENT 7(60) TEXT-006 FOR FIELD CODE1.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN                      POSITION 8.
+PARAMETERS:      DOWN_PAY             AS CHECKBOX DEFAULT '' MODIF ID R10 .
+SELECTION-SCREEN                      COMMENT (65) TEXT-012 FOR FIELD DOWN_PAY.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN                      POSITION 5.
+PARAMETERS:      CODE2                RADIOBUTTON GROUP CODE MODIF ID R10 .
+SELECTION-SCREEN                      COMMENT 7(60) TEXT-007 FOR FIELD CODE2.
+SELECTION-SCREEN END OF LINE.
+
+PARAMETERS:      OLD_TYPE             AS CHECKBOX DEFAULT 'X' MODIF ID R10 .
+
+SELECTION-SCREEN END OF BLOCK BLK4.
+
+**** End of Selection Screen for RFWT0010 report
+
+**** Start of Selection Screen for RFWT0020 report
+SELECTION-SCREEN BEGIN OF BLOCK BLK5 WITH FRAME TITLE TEXT-001.
+
+*SELECTION-SCREEN SKIP 1.
+SELECT-OPTIONS:  I_LIF_20             FOR LFB1-LIFNR MODIF ID R20 ,
+                 I_STCD1              FOR LFA1-STCD1 MODIF ID R20 ,
+                 I_STCD2              FOR LFA1-STCD2 MODIF ID R20 ,
+                 I_KUN_20             FOR KNA1-KUNNR MODIF ID R20 ,
+                 I_KSTCD1             FOR KNA1-STCD1 MODIF ID R20 ,
+                 I_KSTCD2             FOR KNA1-STCD2 MODIF ID R20 ,
+                 I_BUK_20             FOR T001-BUKRS MODIF ID R20 ,
+                 I_BEL_20             FOR BKPF-BELNR MODIF ID R20 ,
+                 I_TIME               FOR BKPF-BUDAT MODIF ID R20 .
+
+SELECTION-SCREEN END OF BLOCK BLK5.
+
+SELECTION-SCREEN BEGIN OF BLOCK BLK6 WITH FRAME TITLE TEXT-016.
+
+SELECTION-SCREEN: BEGIN OF LINE,
+                                      COMMENT 4(60) TEXT-017 FOR FIELD XCREATE, POSITION 2.
+PARAMETERS:      XCREATE              RADIOBUTTON GROUP ULI DEFAULT 'X' MODIF ID R20 .
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN: BEGIN OF LINE,
+                                      COMMENT 4(60) TEXT-018 FOR FIELD XMODIFY, POSITION 2.
+PARAMETERS:      XMODIFY              RADIOBUTTON GROUP ULI MODIF ID R20 .
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF BLOCK BLK7 WITH FRAME TITLE TEXT-019.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      ENTRY                AS CHECKBOX DEFAULT 'X' MODIF ID R20 .
+SELECTION-SCREEN                      COMMENT 4(70) TEXT-020 FOR FIELD ENTRY.
+
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      R_INV                RADIOBUTTON GROUP ZAHL MODIF ID R20 .
+SELECTION-SCREEN                      COMMENT 4(30) TEXT-021 FOR FIELD  R_INV.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      R_PAY                RADIOBUTTON GROUP ZAHL MODIF ID R20 .
+SELECTION-SCREEN                      COMMENT 4(15) TEXT-022 FOR FIELD R_PAY.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS:      TEST_20              AS CHECKBOX DEFAULT 'X' MODIF ID R20 .
+SELECTION-SCREEN                      COMMENT 4(15) TEXT-011 FOR FIELD TEST_20.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN END OF BLOCK BLK7.
+
+SELECTION-SCREEN END OF BLOCK BLK6.
+**** End of Selection Screen for RFWT0020 report
+
+SELECTION-SCREEN FUNCTION KEY 1.

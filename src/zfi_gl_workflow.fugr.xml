@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>GL Workflow Function Modules</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_GL_WORKFLOWTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_GL_WORKFLOW</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFI_GL_WORKFLOW_CHECK</FUNCNAME>
+     <SHORT_TEXT>GL Workflow Check function</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>OBJTYPE</PARAMETER>
+       <DBFIELD>SWETYPECOU-OBJTYPE</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OBJKEY</PARAMETER>
+       <DBFIELD>SWEINSTCOU-OBJKEY</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EVENT</PARAMETER>
+       <DBFIELD>SWEINSTCOU-EVENT</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>RECTYPE</PARAMETER>
+       <DBFIELD>SWETYPECOU-RECTYPE</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>EVENT_CONTAINER</PARAMETER>
+       <DBSTRUCT>SWCONT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>ACTIVE_WF_FOUND</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>INVALID_DOCUMENT_TYPE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>INVALID_KEY</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>OBJTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJKEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EVENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Event</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of Receiver Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EVENT_CONTAINER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Instance Structure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACTIVE_WF_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Found Active Workflow</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>INVALID_DOCUMENT_TYPE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Invalid Document type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>INVALID_KEY</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Invalid document</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZGL_GET_APPROVER</FUNCNAME>
+     <SHORT_TEXT>Find Approver</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ACTOR_TAB</PARAMETER>
+       <DBSTRUCT>SWHACTOR</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>AC_CONTAINER</PARAMETER>
+       <DBSTRUCT>SWCONT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOBODY_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ACTOR_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Rule Resolution Result</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>AC_CONTAINER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Instance Structure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOBODY_FOUND</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZGL_GET_EXCLUSIONS</FUNCNAME>
+     <SHORT_TEXT>Excluded agents</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>USERID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SWP_INITIA</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>DOCTYPE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BLART</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>AGENTS</PARAMETER>
+       <DBSTRUCT>SWHACTOR</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>USERID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Initiator of workflow instance</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DOCTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Document Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>AGENTS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Rule Resolution Result</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZSAMPLE_INTERFACE_00002214</FUNCNAME>
+     <SHORT_TEXT>Schnittstellenbeschreibung zum Event 00002214</SHORT_TEXT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_SUBRC</PARAMETER>
+       <DBFIELD>SY-SUBRC</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_VBKPF</PARAMETER>
+       <DBSTRUCT>FVBKPF</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_XVBSEG</PARAMETER>
+       <DBSTRUCT>FVBSEG</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_YVBSEG</PARAMETER>
+       <DBSTRUCT>FVBSEG</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>E_SUBRC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Value of ABAP Statements</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Change Document Structure; Generated by RSSCD000</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_XVBSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Change Document Structure; Generated by RSSCD000</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_YVBSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Change Document Structure; Generated by RSSCD000</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

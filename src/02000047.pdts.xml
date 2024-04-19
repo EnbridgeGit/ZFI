@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PDTS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PDTS>
+    <SHORT_TEXT>Ztrappnot</SHORT_TEXT>
+    <PLVAR>01</PLVAR>
+    <WI_TEXT>Trip Approval Received. &amp;TRIP.TRIPNUMBER&amp;</WI_TEXT>
+    <METHOD>
+     <OTYPE>TS</OTYPE>
+     <OBJID>02000047</OBJID>
+     <SWOTP>SELFITEM</SWOTP>
+     <SWMTD>SENDTASKDESCRIPTION</SWMTD>
+     <METHTYPE>BO</METHTYPE>
+     <BACKGROUND>X</BACKGROUND>
+     <SYNCHRON>X</SYNCHRON>
+    </METHOD>
+    <DESCRIPTIONS>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>Expense Report # &amp;TRIP.TRIPNUMBER&amp;  for &amp;TRIP.TRAVELERNAME&amp; for</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TLINE>$&amp;TRIP.TOTALCOSTS&amp; has been approved and is ready for posting to the</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000003</TABSEQNR>
+      <TLINE>General Ledger.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000004</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000005</TABSEQNR>
+      <TLINE>If you have additional questions, or require assistance you can visit</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000006</TABSEQNR>
+      <TLINE>The Corporate Card ELink page or log a Service Now ticket with the</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000007</TABSEQNR>
+      <TLINE>Corporate Card Group. When logging a ticket ensure you provide your</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000008</TABSEQNR>
+      <TLINE>expense report number and Employee ID.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000009</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000010</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000047</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000011</TABSEQNR>
+      <TLINE>PLEASE DO NOT REPLY TO THIS E-MAIL.</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+    </DESCRIPTIONS>
+   </PDTS>
+   <CONTAINER>
+    <CONTAINER>
+     <PROPERTIES>
+      <OWN_ID>
+       <INSTID>TS02000047</INSTID>
+       <TYPEID>CL_SWF_CNT_HRS_PERSISTENCE</TYPEID>
+       <CATID>CL</CATID>
+      </OWN_ID>
+      <PROPSTRING>23</PROPSTRING>
+      <XMLVERSION>0002</XMLVERSION>
+      <INTERNAL>X</INTERNAL>
+      <EXDEFINITN>
+       <NAME>_DEF_EXT</NAME>
+       <POR>
+        <INSTID>DIALOG_STEP_CONTAINER</INSTID>
+        <TYPEID>CL_SWF_CNT_PERSISTENCE_DEF_EXT</TYPEID>
+        <CATID>CL</CATID>
+       </POR>
+      </EXDEFINITN>
+     </PROPERTIES>
+     <ELEMENTS>
+      <L NAME="ADDRESSSTRINGS:AddressStrings:" TYPE="::SOXNA-FULLNAME:h:241:0" PROPS="0C007341"/>
+      <M NAME="TYPEID:TypeId:" TYPE="::SOS04-L_ART:C:1:0" PROPS="8C0033"/>
+      <N NAME="RECEIVERS:Receivers:" TYPE=":BO::h:0:0" PROPS="0C925341"/>
+      <O NAME="EXPRESS:Express:" TYPE="::SOS04-L_SEX:C:1:0" PROPS="0C003301"/>
+      <P NAME="LANGUAGE:Language:" TYPE="::SYST-LANGU:C:1:0" PROPS="0C003301"/>
+      <Q NAME="ATTACHMENTS:Attachments:" TYPE="SOFM:BO::h:0:0" PROPS="0C925341"/>
+      <R NAME="SIGN:Sign:" TYPE="::SOS04-S_SEX:C:1:0" PROPS="0C003301"/>
+      <S NAME="ENCRYPT:Encrypt:" TYPE="::SOS04-S_SEX:C:1:0" PROPS="0C003301"/>
+      <T NAME="LINEWIDTH:LineWidth:" TYPE="::THEAD-TDLINESIZE:N:3:0" PROPS="0C003301"/>
+      <U NAME="TRIP::" TYPE="BUS2089:BO::u:0:0" PROPS="0C921001"/>
+     </ELEMENTS>
+    </CONTAINER>
+   </CONTAINER>
+  </asx:values>
+ </asx:abap>
+</abapGit>

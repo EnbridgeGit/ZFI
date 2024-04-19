@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Files  Archiving</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_FILETOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_FILE</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFI_FILE_HANDLE</FUNCNAME>
+     <SHORT_TEXT>File Archiving</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_SOURCE_DIR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SXPGCOLIST-PARAMETERS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_TARGET_DIR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SXPGCOLIST-PARAMETERS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_SOURCE_FNAME</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SXPGCOLIST-PARAMETERS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_TARGET_FNAME</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SXPGCOLIST-PARAMETERS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_COMMAND</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>C</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DATE_TIME_STAMP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>C</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_RENAME_ARC_TO_NEW</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>C</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_RETURN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIRETURN</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_SOURCE_DIR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Parameters of external program (string)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_TARGET_DIR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Parameters of external program (string)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_SOURCE_FNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Parameters of external program (string)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_TARGET_FNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Parameters of external program (string)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_COMMAND</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Command = C / M / R</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DATE_TIME_STAMP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Date / Time Stamp Flag</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_RENAME_ARC_TO_NEW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Rename Extension from .ARC to .NEW</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

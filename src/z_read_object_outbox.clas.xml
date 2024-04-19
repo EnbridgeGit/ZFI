@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>Z_READ_OBJECT_OUTBOX</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Read Object Outbox Data.</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <LINES>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;RELATIONS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;HINTS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>U1</TDFORMAT>
+     <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+   </LINES>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_OBJECT_OUTBOX</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Read Object Out Box Data.</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_OBJECT_OUTBOX</CMPNAME>
+     <SCONAME>CX_OBL_PARAMETER_ERROR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Incorrect Calling of Interface</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_OBJECT_OUTBOX</CMPNAME>
+     <SCONAME>ETAB_SOOD</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Type for SOOD</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_OBJECT_OUTBOX</CMPNAME>
+     <SCONAME>ETAB_SOOS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Type for SOOS</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_OBJECT_OUTBOX</CMPNAME>
+     <SCONAME>ETAB_SO_NOTES</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>SAP Office Notes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_OBJECT_OUTBOX</CMPNAME>
+     <SCONAME>I_CATID_A</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Category of Objects in Persistent Object References</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_OBJECT_OUTBOX</CMPNAME>
+     <SCONAME>I_INSTID_A</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Instance Ident. in BOR Compat. Persistent Object References</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_OBJECT_OUTBOX</CMPNAME>
+     <SCONAME>I_TYPEID_A</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Type of Objects in Persistent Object References</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

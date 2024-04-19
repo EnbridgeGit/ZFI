@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<abapGit version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TDLINES>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>ABDUMMY</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>ADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>ATHRZLIT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H6</TDFORMAT>
+     <TDLINE>_________________________________</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H6</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H6</TDFORMAT>
+     <TDLINE>Authorized Signature</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>AVENDOR</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Vendor Name</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;GWA_REGUH-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>BANK_ADR</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Bank Address</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PERFORM GET_BANK IN PROGRAM ZFAPR021_IN_HOUSE_CHECK_SRP</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>USING &amp;GWA_REGUH-UBNKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>USING &amp;GWA_REGUH-UBNKL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CHANGING &amp;BANKNAME&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CHANGING &amp;BANKSTREET&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CHANGING &amp;CITYPROV&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CHANGING &amp;BANKPOSTCODE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>&amp;BANKNAME&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>&amp;BANKSTREET&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>&amp;CITYPROV&amp; &amp;BANKPOSTCODE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>TD CANADA TRUST &amp;GWA_REGUH-CHK_FRAC&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>340 5th Ave SW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>Calgary, AB  T2P 0L3</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>BOX_MAIN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Window for for printing Box lines for Main window</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 000 &apos;MM&apos; YPOS 5 &apos;MM&apos; HEIGHT 000 &apos;MM&apos; WIDTH 201 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 015 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 132 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 056 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 132 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 074 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 132 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 135 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 132 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 157 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 132 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 179 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 132 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>BX_MAIN2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 000 &apos;MM&apos; YPOS 5 &apos;MM&apos; HEIGHT 000 &apos;MM&apos; WIDTH 201 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 015 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 202 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 056 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 202 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 074 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 202 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 135 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 202 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 157 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 202 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 179 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 202 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CARRYFWD</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Balance Carry Forward</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>535</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CHECK</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Actual Check</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>545</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CHECKADD</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;GWA_REGUH-ZNME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF  &amp;GWA_REGUH-ZNME2&amp; &lt;&gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;GWA_REGUH-ZNME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF  &amp;GWA_REGUH-ZPFAC&amp; &lt;&gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>PO BOX &amp;GWA_REGUH-ZPFAC&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;GWA_REGUH-ZORT1&amp;, &amp;GWA_REGUH-ZREGI&amp; &amp;GWA_REGUH-ZPST2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF  &amp;GWA_REGUH-ZSTRA&amp; &lt;&gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;GWA_REGUH-ZSTRA&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;GWA_REGUH-ZORT1&amp;, &amp;GWA_REGUH-ZREGI&amp; &amp;GWA_REGUH-ZPSTL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CHECKSPL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Amount In Words</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>W2</TDFORMAT>
+     <TDLINE>&amp;GWA_SPELL-WORD&amp; DOLLARS AND &amp;GWA_SPELL-DECIMAL(2)&amp; CENTS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CHEQUE2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PERFORM GET_VOID_FLAG IN PROGRAM ZFAPR021_IN_HOUSE_CHECK_SRP</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;VOID_FLAG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;VOID_FLAG&amp; NE &apos;X&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AM</TDFORMAT>
+     <TDLINE>$&lt;/&gt;&amp;GWA_REGUD-SWNES+00(17)&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF     &amp;GWA_REGUH-WAERS&amp; EQ &apos;USD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z2</TDFORMAT>
+     <TDLINE>USD Funds</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;GWA_REGUH-WAERS&amp; EQ &apos;CAD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z2</TDFORMAT>
+     <TDLINE>CAD Funds</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CHKPTLIT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H8</TDFORMAT>
+     <TDLINE>TO THE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H8</TDFORMAT>
+     <TDLINE>ORDER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H8</TDFORMAT>
+     <TDLINE>OF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CHKSPLIT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H8</TDFORMAT>
+     <TDLINE>PAY</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CHK_LOGO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BITMAP &apos;ZLOGO_ENBRIDGE_BW&apos; OBJECT GRAPHICS ID BMAP TYPE BMON DPI 300</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CH_NUMBR</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Check Number, Check Date, Vendor Number, and Vendor Name</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;DD MMM YY&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CK</TDFORMAT>
+     <TDLINE>,,CHECK NO.,,&amp;GWA_REGUD-CHECT&amp;,,DATE,,&amp;GWA_REGUH-AUSFD&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CK</TDFORMAT>
+     <TDLINE>,,VENDOR NO.,,&amp;GWA_REGUH-LIFNR&amp;,,NAME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CK</TDFORMAT>
+     <TDLINE>,,PAYMENT DOC.,,&amp;GWA_REGUH-VBLNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CKDATLIT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Check Date Literal</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H8</TDFORMAT>
+     <TDLINE>DATE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CKNBDTVL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Check Number and Date Values</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOX XPOS 03 MM YPOS 02 MM WIDTH 21 MM HEIGHT 04 MM FRAME 10 TW INTENSITY 20</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PERFORM F_FORMAT_VAR_BOA_CHECK_MICR IN PROGRAM ZFAPR021_IN_HOUSE_CHECK_SRP</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;GWA_REGUD-CHECT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;VAR1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H5</TDFORMAT>
+     <TDLINE>&amp;VAR1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;YYYYMMDD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF     &amp;GWA_REGUH-RZAWE&amp; EQ &apos;P&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AG</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUH-VALUT+0(1)&amp;,,&amp;GWA_REGUH-VALUT+1(1)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUH-VALUT+2(1)&amp;,,&amp;GWA_REGUH-VALUT+3(1)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUH-VALUT+4(1)&amp;,,&amp;GWA_REGUH-VALUT+5(1)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUH-VALUT+6(1)&amp;,,&amp;GWA_REGUH-VALUT+7(1)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AG</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUH-ZALDT+0(1)&amp;,,&amp;GWA_REGUH-ZALDT+1(1)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUH-ZALDT+2(1)&amp;,,&amp;GWA_REGUH-ZALDT+3(1)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUH-ZALDT+4(1)&amp;,,&amp;GWA_REGUH-ZALDT+5(1)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUH-ZALDT+6(1)&amp;,,&amp;GWA_REGUH-ZALDT+7(1)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>,,Y,,Y,,Y,,Y,,M,,M,,D,,D</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CKNBRLIT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Check Number Literal</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H8</TDFORMAT>
+     <TDLINE>CHECK</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>DETACH</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H4</TDFORMAT>
+     <TDLINE>DETACH BEFORE DEPOSITING</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>HEADER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Sending Company Code Address</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&lt;B&gt;&amp;GWA_ADRC-NAME1&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/=</TDFORMAT>
+     <TDLINE>&lt;C4&gt;&amp;GWA_ADRC-STREET&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/=</TDFORMAT>
+     <TDLINE>&amp;GWA_ADRC-CITY1&amp;, &amp;GWA_ADRC-REGION&amp;  &amp;GWA_ADRC-POST_CODE1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/=</TDFORMAT>
+     <TDLINE>&amp;GWA_ADRC-COUNTRY&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>INFO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>505</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>INFO2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>&lt;S&gt;Document / Date&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>&amp;REGUH-VBLNR&apos; / &apos;&amp;&amp;REGUH-ZALDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>IT_HEAD</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Line Item Headers with Shading</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MH</TDFORMAT>
+     <TDLINE>,,Inv. Date,,Invoice Number,,Voucher No.,,Details</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,Gross Amount,,Disc./Adj.,,Net Amount</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW INTENSITY 30</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 015 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 005 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 056 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 005 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 074 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 005 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 135 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 005 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 157 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 005 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 179 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 005 &apos;MM&apos; WIDTH 000 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>LOGO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BITMAP &apos;ZLOGO_ENBRIDGE_BW&apos; OBJECT GRAPHICS ID BMAP TYPE BMON DPI 300</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>MAIN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------ Line items ------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>100</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;DD MMM YY&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUP-BLDAT&amp;,,&amp;GWA_REGUP-XBLNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;GWA_REGUP-BELNR&amp;,,&amp;GWA_REGUD-TEXT1(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;&apos;$&apos;GWA_REGUD-WRBTR(15)&amp;,,&amp;&apos;$&apos;GWA_REGUD-WABZG(15)&amp;,,&amp;&apos;$&apos;GWA_REGUD-WNETT(15)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF GWA_REGUD-TEXT2 &gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&amp;GWA_REGUD-TEXT2(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF GWA_REGUD-TEXT3 &gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&amp;GWA_REGUD-TEXT3(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF GWA_REGUD-TEXT4 &gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&amp;GWA_REGUD-TEXT4(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF GWA_REGUD-TEXT5 &gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&amp;GWA_REGUD-TEXT5(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF GWA_REGUD-TEXT6 &gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&amp;GWA_REGUD-TEXT6(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF GWA_REGUD-TEXT7 &gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&amp;GWA_REGUD-TEXT7(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF GWA_REGUD-TEXT8 &gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&amp;GWA_REGUD-TEXT8(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF GWA_REGUD-TEXT9 &gt; &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&amp;GWA_REGUD-TEXT9(34)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>MICR_W</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>MICR Line Printing</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PERFORM F_FORMAT_VAR_TD_CHECK_MICR IN PROGRAM ZFAPR021_IN_HOUSE_CHECK_SRP</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;GWA_REGUD-CHECT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;GWA_REGUH-UBNKL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;GWA_REGUH-UBKNT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;VAR1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;VAR2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;VAR3&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;VAR4&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;VAR5&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,C&amp;VAR1&amp;C A&amp;VAR2&amp;D&amp;VAR3&amp;A       D&amp;GWA_REGUH-CHK_PROT_ACNT&amp;C</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>,,C&amp;VAR1&amp;C A01489D004A       D&amp;GWA_REGUH-CHK_PROT_ACNT&amp;C</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>PAGE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>Page: &amp;PAGE&amp; of &amp;SAPSCRIPT-FORMPAGES&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>SEND_ADR</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Sending Company Address</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&lt;B&gt;&amp;GWA_ADRC-NAME1&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;GWA_ADRC-STREET&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;GWA_ADRC-CITY1&amp;, &amp;GWA_ADRC-REGION&amp;  &amp;GWA_ADRC-POST_CODE1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>&amp;GWA_ADRC-COUNTRY&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>SIGN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;ULINE(29)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>ST</TDFORMAT>
+     <TDLINE>,,Authorized Signature</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>SIGN2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>&amp;ULINE(29)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>ST</TDFORMAT>
+     <TDLINE>,,Authorized Signature</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>SIGN_LG2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Signature</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>H6</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BITMAP &apos;ZSIGN_MCHAN2&apos; OBJECT GRAPHICS ID BMAP TYPE BMON DPI 300</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TOTAL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>-----------Sub Total and Total ---------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 135 &apos;MM&apos; YPOS 5 &apos;MM&apos; HEIGHT 0 &apos;MM&apos; WIDTH 66 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 135 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 5 &apos;MM&apos; WIDTH  0 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 157 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 5 &apos;MM&apos; WIDTH  0 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 179 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 5 &apos;MM&apos; WIDTH  0 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX XPOS 201 &apos;MM&apos; YPOS 0 &apos;MM&apos; HEIGHT 5 &apos;MM&apos; WIDTH  0 &apos;MM&apos; FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>MI</TDFORMAT>
+     <TDLINE>,,,,,,,,&lt;B&gt;Total/Subtotal&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;&apos;$&apos;GWA_REGUD-SWRBT(15)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;&apos;$&apos;GWA_REGUD-SWSKT(15)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,,&amp;&apos;$&apos;GWA_REGUD-SWNET(15)&amp;</TDLINE>
+    </TLINE>
+   </TDLINES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

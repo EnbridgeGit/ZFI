@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Duplicate Invoice Check</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_DUP_INV_CHECKTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_DUP_INV_CHECK</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZSAMPLE_PROCESS_00001110</FUNCNAME>
+     <SHORT_TEXT>Beschreibung der Prozess-Schnittstelle 00001110</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BUKRS</PARAMETER>
+       <DBFIELD>BKPF-BUKRS</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_LIFNR</PARAMETER>
+       <DBFIELD>BSEG-LIFNR</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_WAERS</PARAMETER>
+       <DBFIELD>BKPF-WAERS</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BLDAT</PARAMETER>
+       <DBFIELD>BKPF-BLDAT</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_XBLNR</PARAMETER>
+       <DBFIELD>BKPF-XBLNR</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_WRBTR</PARAMETER>
+       <DBFIELD>BSEG-WRBTR</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BELNR</PARAMETER>
+       <DBFIELD>BSEG-BELNR</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_GJAHR</PARAMETER>
+       <DBFIELD>BSEG-GJAHR</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BUZEI</PARAMETER>
+       <DBFIELD>BSEG-BUZEI</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_SHKZG</PARAMETER>
+       <DBFIELD>BSEG-SHKZG</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BLART</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BLART</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_NOSTD</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Buchungskreis</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_LIFNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kreditorenkonto</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_WAERS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Währung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BLDAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegdatum</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_XBLNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Referenz-Belegnummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_WRBTR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Betrag in Belegwährung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegnummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Geschäftsjahr</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BUZEI</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Buchungszeile</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_SHKZG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Soll/Haben-Kennzeichen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BLART</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegart</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_NOSTD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>&apos;X&apos; = Standard nicht mehr ausführen</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <LONGTEXTS_ZSAMPLE_PROCESS_00001110>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZSAMPLE_PROCESS_00001110</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0008</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00016</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZSAMPLE_PROCESS_00001110</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00008</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Doppelte Rechnungsprüfung&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00001110&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PROCESS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Prozess wird immer dann erreicht, wenn der Funktionsbaustein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>FI_DUPLICATE_INVOICE_CHECK aufgerufen wird.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>SCHNITTSTELLE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>An die Zusatzkomponente werden prüfungsrelevante Belegdaten übergeben,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>anhand deren Inhalte entschieden werden kann, ob die Rechnung bereits</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erfaßt wurde.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>ACHTUNG: Sollten Sie Ihren eigenen Funktionsbaustein durch Kopie des</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Bausteins FI_DUPLICATE_INVOICE_CHECK angelegt haben, so müssen Sie in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Kopie den Aufruf</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>CALL FUNCTION &apos;OPEN_FI_PERFORM_00001110_P&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>entfernen !</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZSAMPLE_PROCESS_00001110</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0008</VERSION>
+      <TXTLINES>00015</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZSAMPLE_PROCESS_00001110</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00008</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Double invoice check&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00001110&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX LANGUAGE EN</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PROCESS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This process is always reached when the function module</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>FI_DUPLICATE_INVOICE_CHECK is called up.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>INTERFACE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Document data relevant for the check is transferred to the additional</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>component. This data is used to establish whether the invoice has</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>already been created.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>CAUTION: If you have created your own function module by copying the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>function module FI_DUPLICATE_INVOICE_CHECK, you must remove the call</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>CALL FUNCTION &apos;OPEN_FI_PERFORM_00001110_P&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>from your copy.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS_ZSAMPLE_PROCESS_00001110>
+  </asx:values>
+ </asx:abap>
+</abapGit>

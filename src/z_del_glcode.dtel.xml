@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>Z_DEL_GLCODE</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>CHAR04</DOMNAME>
+    <HEADLEN>32</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>32</SCRLEN3>
+    <DDTEXT>Banner G/L Class Code - Delivery</DDTEXT>
+    <REPTEXT>Banner G/L Class Code - Delivery</REPTEXT>
+    <SCRTEXT_S>Ban.GL Del</SCRTEXT_S>
+    <SCRTEXT_M>Banner GL Class Delv</SCRTEXT_M>
+    <SCRTEXT_L>Banner G/L Class Code - Delivery</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

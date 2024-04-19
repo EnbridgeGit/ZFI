@@ -1,0 +1,321 @@
+REPORT ZFGLR007 NO STANDARD PAGE HEADING LINE-SIZE 117.
+******************************************************************
+*      Owner: Centra/Union Gas Ltd. - BIS                        *
+* Programmer: Yaxin Veliz - OmniLogic Systems Group (Toronto)    *
+*       Date: August 15th, 1996                                  *
+* Request ID: DRFI0024                                           *
+*                                                                *
+* This program allows you to report on Multiple G/L Accounts     *
+* and will generate monthly totals for specified periods.        *
+******************************************************************
+*CHANGES**********************************************************
+* 2005/08/29mkhan TR105 Select Actual amount only as PLAN amount *
+*                     is going to be introduced in FI.           *
+******************************************************************
+
+TABLES: BSEG,   "Accounting Document Segment
+        GLT0,   "G/L Account Master Record Monthly Debits and Credits
+        SKAT,   "G/L Account Master Record Chart of Accounts Description
+        SKB1.   "G/L Account Master (Company Codes)
+DATA:
+
+ TOTAL        TYPE P DECIMALS 2,         "Var to store Total balance
+ MONTH        LIKE TOTAL,                "Var to store monthly balances
+ GR_TOTAL     TYPE P DECIMALS 2,         "Var to store Grand Total
+ GR_MONTH     LIKE GR_TOTAL,             "Var to store Total Month
+ LN_CNTR      TYPE I,                    "Line counter Variable
+ REC_CNTR(4)  TYPE N,                    "Variable used for record count
+
+ BEGIN OF WTAB OCCURS 100,               "Internal Table for performance
+   RCLNT   LIKE GLT0-RCLNT,
+   RELDNR  LIKE GLT0-RLDNR,
+   RRCTY   LIKE GLT0-RRCTY,
+   RVERS   LIKE GLT0-RVERS,
+   BUKRS   LIKE GLT0-BUKRS,
+   RYEAR   LIKE GLT0-RYEAR,
+   ACCOUNT LIKE GLT0-RACCT,
+   RBUSA   LIKE GLT0-RBUSA,
+   RTCUR   LIKE GLT0-RTCUR,
+   DRCRX   LIKE GLT0-DRCRK,
+   RPMAX   LIKE GLT0-RPMAX,
+   TSLVT   LIKE GLT0-TSLVT,
+   JAN     LIKE GLT0-TSL01,
+   FEB     LIKE GLT0-TSL02,
+   MAR     LIKE GLT0-TSL03,
+   APR     LIKE GLT0-TSL04,
+   MAY     LIKE GLT0-TSL05,
+   JUN     LIKE GLT0-TSL06,
+   JUL     LIKE GLT0-TSL07,
+   AUG     LIKE GLT0-TSL08,
+   SEP     LIKE GLT0-TSL09,
+   OCT     LIKE GLT0-TSL10,
+   NOV     LIKE GLT0-TSL11,
+   DEC     LIKE GLT0-TSL12,
+ END OF WTAB.
+
+SELECTION-SCREEN BEGIN OF BLOCK
+          PROMPT WITH FRAME.
+
+SELECTION-SCREEN BEGIN OF BLOCK BOX1 WITH FRAME.
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN: COMMENT 16(43) TEXT-001 MODIF ID ABC.
+SELECTION-SCREEN END OF LINE.
+SELECTION-SCREEN END OF BLOCK BOX1.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN BEGIN OF BLOCK INPUTS WITH FRAME.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN: COMMENT 10(20) TEXT-002.
+PARAMETERS: P_TITLE(35) TYPE C OBLIGATORY MODIF ID ABC.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN: COMMENT 10(20) TEXT-003.
+PARAMETERS: P_PERIOD(2) DEFAULT SY-DATUM+4(2) OBLIGATORY MODIF ID ABC.
+SELECTION-SCREEN: COMMENT 36(27) TEXT-013 MODIF ID ABC.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN: COMMENT 10(20) TEXT-012.
+PARAMETERS: P_ACCUM(2) DEFAULT SY-DATUM+4(2) OBLIGATORY MODIF ID ABC.
+SELECTION-SCREEN: COMMENT 36(34) TEXT-014 MODIF ID ABC.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN: COMMENT 36(30) TEXT-015 MODIF ID ABC.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN: COMMENT 10(20) TEXT-004.
+PARAMETERS:
+  P_FISCAL LIKE GLT0-RYEAR DEFAULT SY-DATUM(4) OBLIGATORY MODIF ID ABC.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN: COMMENT 10(20) TEXT-005.
+PARAMETERS:
+  P_CMPNY LIKE GLT0-BUKRS DEFAULT 'UGL' OBLIGATORY MODIF ID ABC.
+SELECTION-SCREEN END OF LINE.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN END OF BLOCK INPUTS.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN BEGIN OF BLOCK ACCT WITH FRAME.
+
+SELECT-OPTIONS:
+S_GLACCT FOR SKB1-SAKNR NO INTERVALS MODIF ID ABC. "G/L Accounts
+
+SELECTION-SCREEN END OF BLOCK ACCT.
+
+SELECTION-SCREEN END OF BLOCK PROMPT.
+
+INITIALIZATION.
+MOVE '60' TO LN_CNTR.                      "Line counter for page break.
+REFRESH WTAB.
+
+* The following will highlight the screen's output for certain texts. *
+
+AT SELECTION-SCREEN OUTPUT.
+  LOOP AT SCREEN.
+    CHECK SCREEN-GROUP1 = 'ABC'.
+    SCREEN-INTENSIFIED = '1'.
+    MODIFY SCREEN.
+  ENDLOOP.
+
+***********************BEGINNING OF MAIN PROGRAM************************
+
+START-OF-SELECTION.
+PERFORM WRT_HDG.
+SELECT * FROM GLT0
+ WHERE   RRCTY = '0'                     "Actual Amount    TR105
+   AND   BUKRS = P_CMPNY
+   AND   RYEAR = P_FISCAL
+   AND   RACCT IN S_GLACCT.
+  PERFORM BUILDTAB.
+ENDSELECT.
+PERFORM GETINFO.
+PERFORM CHK_DATA.
+END-OF-SELECTION.
+
+***********************BEGINNING OF FORMS*******************************
+
+* This routine writes the Sub Headings. *
+
+FORM WRT_HDG.
+ NEW-PAGE WITH-TITLE.
+ MOVE '0' TO LN_CNTR.
+ FORMAT INTENSIFIED ON.
+ WRITE: /1 TEXT-005, 15 P_CMPNY.
+ WRITE:  47 P_TITLE.
+ WRITE: 96 TEXT-003, 114 P_PERIOD.
+ SKIP.
+ WRITE: /1 TEXT-004, 15 P_FISCAL.
+ WRITE:  90 TEXT-012,  114 P_ACCUM.
+ ULINE: /.
+ WRITE: /1 TEXT-006, 15 TEXT-007, 85 TEXT-009, 101 TEXT-011.
+ SKIP.
+ WRITE: /1 TEXT-007, 15 TEXT-008, 85 TEXT-010, 101 TEXT-009,
+         109 TEXT-010.
+ ULINE: /.
+ MOVE '11' TO LN_CNTR.
+ FORMAT INTENSIFIED OFF.
+ENDFORM.
+
+* This routine builds the wtab table for data processing. *
+
+FORM BUILDTAB.
+ CLEAR WTAB.
+ APPEND GLT0 TO WTAB.
+ENDFORM.
+
+* This routine processes the data in the wtab table and joins the SKAT *
+* table with the GLT0 table to gather the appropriate descriptions.    *
+
+FORM GETINFO.
+ LOOP AT WTAB.
+   SORT WTAB BY ACCOUNT.
+   AT END OF ACCOUNT.
+    SUM.
+    SELECT SINGLE * FROM SKAT
+           WHERE SAKNR = WTAB-ACCOUNT
+           AND KTOPL = 'COAT'
+           AND SPRAS = 'E'.
+    PERFORM BALANCE USING P_PERIOD CHANGING MONTH.
+    PERFORM TOT_BAL USING P_ACCUM  CHANGING TOTAL.
+    PERFORM WRT_DET.
+    PERFORM RESETVAL.
+   ENDAT.
+ ENDLOOP.
+ENDFORM.
+
+* This routine sets the specific month total to be displayed. *
+
+FORM BALANCE USING P_PERIOD CHANGING MONTH.
+ IF P_PERIOD = '1'  OR P_PERIOD = '01'.
+     MONTH = WTAB-JAN.
+ ELSEIF P_PERIOD = '2'  OR P_PERIOD = '02'.
+     MONTH = WTAB-FEB.
+ ELSEIF P_PERIOD = '3'  OR P_PERIOD = '03'.
+     MONTH = WTAB-MAR.
+ ELSEIF P_PERIOD = '4'  OR P_PERIOD = '04'.
+     MONTH = WTAB-APR.
+ ELSEIF P_PERIOD = '5' OR P_PERIOD = '05'.
+     MONTH = WTAB-MAY.
+ ELSEIF P_PERIOD = '6' OR P_PERIOD = '06'.
+     MONTH = WTAB-JUN.
+ ELSEIF P_PERIOD = '7' OR P_PERIOD = '07'.
+     MONTH = WTAB-JUL.
+ ELSEIF P_PERIOD = '8' OR P_PERIOD = '08'.
+     MONTH = WTAB-AUG.
+ ELSEIF P_PERIOD = '9' OR P_PERIOD = '09'.
+     MONTH = WTAB-SEP.
+ ELSEIF P_PERIOD = '10'.
+     MONTH = WTAB-OCT.
+ ELSEIF P_PERIOD = '11'.
+     MONTH = WTAB-NOV.
+ ELSE.
+     MONTH = WTAB-DEC.
+ ENDIF.
+ENDFORM.
+
+* This routine accumulates all the months up to the period specified. *
+
+FORM TOT_BAL USING P_ACCUM CHANGING TOTAL.
+ IF P_ACCUM = '1'  OR P_ACCUM = '01'.
+   TOTAL = TOTAL + WTAB-JAN.
+ ELSEIF P_ACCUM = '2'  OR P_ACCUM = '02'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB.
+ ELSEIF P_ACCUM = '3'  OR P_ACCUM = '03'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR.
+ ELSEIF P_ACCUM = '4'  OR P_ACCUM = '04'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR.
+ ELSEIF P_ACCUM = '5' OR P_ACCUM = '05'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR
+                 + WTAB-MAY.
+ ELSEIF P_ACCUM = '6' OR P_ACCUM = '06'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR
+                 + WTAB-MAY + WTAB-JUN.
+ ELSEIF P_ACCUM = '7' OR P_ACCUM = '07'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR
+                  + WTAB-MAY + WTAB-JUN + WTAB-JUL.
+ ELSEIF P_ACCUM = '8' OR P_ACCUM = '08'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR
+                 + WTAB-MAY + WTAB-JUN + WTAB-JUL + WTAB-AUG.
+ ELSEIF P_ACCUM = '9' OR P_ACCUM = '09'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR
+                 + WTAB-MAY + WTAB-JUN + WTAB-JUL + WTAB-AUG
+                 + WTAB-SEP.
+ ELSEIF P_ACCUM = '10'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR
+                 + WTAB-MAY + WTAB-JUN + WTAB-JUL + WTAB-AUG
+                 + WTAB-SEP + WTAB-OCT.
+ ELSEIF P_ACCUM = '11'.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR
+                 + WTAB-MAY + WTAB-JUN + WTAB-JUL + WTAB-AUG
+                 + WTAB-SEP + WTAB-OCT + WTAB-NOV.
+ ELSE.
+   TOTAL = TOTAL + WTAB-JAN + WTAB-FEB + WTAB-MAR + WTAB-APR
+                 + WTAB-MAY + WTAB-JUN + WTAB-JUL + WTAB-AUG
+                 + WTAB-SEP + WTAB-OCT + WTAB-NOV + WTAB-DEC.
+ ENDIF.
+ENDFORM.
+
+* This routine writes the detail of the report. *
+
+FORM WRT_DET.
+ IF LN_CNTR >= 59.
+    PERFORM WRT_HDG.
+ ENDIF.
+ SKIP.
+ WRITE: /1 WTAB-ACCOUNT, 15 SKAT-TXT50, 75 '$', 76 MONTH,
+ 99 '$', 100 TOTAL.
+ GR_MONTH = GR_MONTH + MONTH.
+ GR_TOTAL = GR_TOTAL + TOTAL.
+ LN_CNTR = LN_CNTR + 2.
+ REC_CNTR = REC_CNTR + 1.
+ENDFORM.
+
+* This routine resets and clears the Month and Total Variables. *
+
+FORM RESETVAL.
+ CLEAR: MONTH,
+        TOTAL.
+ENDFORM.
+
+* This routine checks if data exists before it executes the wrt_tot. *
+
+FORM CHK_DATA.
+ IF SY-SUBRC NE 0.
+    WRITE /1 TEXT-017.
+ ELSE.
+    PERFORM WRT_FINAL.
+ ENDIF.
+ENDFORM.
+
+* This routine writes the grand total for the accounts. *
+
+FORM WRT_FINAL.
+ IF LN_CNTR >= 59.
+    PERFORM WRT_HDG.
+ ENDIF.
+ SKIP.
+ ULINE: /76(16), 100(16).
+ FORMAT COLOR COL_TOTAL ON INTENSIFIED ON.
+ WRITE: /1 TEXT-016, 15 REC_CNTR, 20 TEXT-018,  75 '$', 76 GR_MONTH,
+ 99 '$', 100 GR_TOTAL.
+ FORMAT COLOR COL_TOTAL OFF INTENSIFIED OFF.
+ ULINE: /76(16), 100(16).
+ENDFORM.

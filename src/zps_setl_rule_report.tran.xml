@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TRAN" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TSTC>
+    <TCODE>ZPS_SETL_RULE_REPORT</TCODE>
+    <CINFO>Ag==</CINFO>
+   </TSTC>
+   <TSTCC>
+    <TCODE>ZPS_SETL_RULE_REPORT</TCODE>
+    <S_WEBGUI>1</S_WEBGUI>
+    <S_WIN32>X</S_WIN32>
+    <S_PLATIN>X</S_PLATIN>
+   </TSTCC>
+   <TSTCT>
+    <SPRSL>E</SPRSL>
+    <TCODE>ZPS_SETL_RULE_REPORT</TCODE>
+    <TTEXT>Project Settlement Rule Display</TTEXT>
+   </TSTCT>
+   <TSTCP>
+    <TCODE>ZPS_SETL_RULE_REPORT</TCODE>
+    <PARAM>/*START_REPORT D_SREPOVARI-REPORTTYPE=AQ;D_SREPOVARI-EXTDREPORT=PS_SETTLE_RULE;D_SREPOVARI-REPORT=SUSTAIN      G;</PARAM>
+   </TSTCP>
+  </asx:values>
+ </asx:abap>
+</abapGit>

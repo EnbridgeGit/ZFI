@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>IAP Invoice Post</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZAP_IAP_INVOICEF01</SOBJ_NAME>
+    <SOBJ_NAME>LZAP_IAP_INVOICETOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZAP_IAP_INVOICE</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZAP_IAP_INVOICE_POST</FUNCNAME>
+     <SHORT_TEXT>IAP Document Post</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>CHECK</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>XFLAG</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>IAP_HDR</PARAMETER>
+       <DBSTRUCT>ZAPS_IAP_DOC_HDR</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IAP_ITEM</PARAMETER>
+       <DBSTRUCT>ZAPS_IAP_DOC_ITEM</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IAP_ACTG</PARAMETER>
+       <DBSTRUCT>ZAPS_IAP_DOC_ACTG</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CHECK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>New Input Values</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IAP_HDR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document Header</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IAP_ITEM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document Item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IAP_ACTG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document Accounting</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZAP_IAP_UG_TAXCODE_GRP1</FUNCNAME>
+     <SHORT_TEXT>UG Tax Code Group 1 ( Similer Type )</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <DBFIELD>ZAPS_IAP_DOC_HDR</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>GL_LINES</PARAMETER>
+       <DBSTRUCT>BAPIACGL09</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <DBSTRUCT>BAPIACCR09</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <DBSTRUCT>BAPIACTX09</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document Header</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GL_LINES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>G/L account item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Currency Items</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tax item</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZAP_IAP_UG_TAXCODE_GRP2</FUNCNAME>
+     <SHORT_TEXT>UG Tax Code Group 2 ( Similer Type )</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <DBFIELD>ZAPS_IAP_DOC_HDR</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>GL_LINES</PARAMETER>
+       <DBSTRUCT>BAPIACGL09</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <DBSTRUCT>BAPIACCR09</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <DBSTRUCT>BAPIACTX09</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document Header</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GL_LINES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>G/L account item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Currency Items</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tax item</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZAP_IAP_UG_TAXCODE_GRP3</FUNCNAME>
+     <SHORT_TEXT>UG Tax Code Group 3 ( Similer Type )</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <DBFIELD>ZAPS_IAP_DOC_HDR</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>GL_LINES</PARAMETER>
+       <DBSTRUCT>BAPIACGL09</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <DBSTRUCT>BAPIACCR09</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <DBSTRUCT>BAPIACTX09</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document Header</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GL_LINES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>G/L account item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Currency Items</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tax item</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZAP_IAP_UG_TAXCODE_GRP4</FUNCNAME>
+     <SHORT_TEXT>UG Tax Code Group 4 ( Similer Type )</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <DBFIELD>ZAPS_IAP_DOC_HDR</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>GL_LINES</PARAMETER>
+       <DBSTRUCT>BAPIACGL09</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <DBSTRUCT>BAPIACCR09</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <DBSTRUCT>BAPIACTX09</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document Header</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GL_LINES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>G/L account item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CURRENCYAMOUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Currency Items</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACCOUNTTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tax item</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZAP_IAP_UG_TAXCODE_PO_GRP2</FUNCNAME>
+     <SHORT_TEXT>Tax Calculations for PO Category (H4)</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <DBFIELD>ZAPS_IAP_DOC_HDR</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ITEM_DATA</PARAMETER>
+       <DBSTRUCT>BAPI_INCINV_CREATE_ITEM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TAXDATA</PARAMETER>
+       <DBSTRUCT>BAPI_INCINV_CREATE_TAX</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>HEADER_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document Header</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ITEM_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Transfer Structure for Invoice Item Data (Create)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TAXDATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Transfer Structure for Tax Data (Create)</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZFAPA001</NAME>
+    <SQLX>R</SQLX>
+    <DBAPL>F</DBAPL>
+    <DBNA>PY</DBNA>
+    <CLAS>FORD</CLAS>
+    <SUBC>1</SUBC>
+    <APPL>F</APPL>
+    <RSTAT>P</RSTAT>
+    <RLOAD>E</RLOAD>
+    <LDBNAME>PYF</LDBNAME>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>100</KEY>
+     <ENTRY>Reprint checks</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>101</KEY>
+     <ENTRY>Void and reprint checks from payment run already printed              ;</ENTRY>
+     <LENGTH>71</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>106</KEY>
+     <ENTRY>Check lot number</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>107</KEY>
+     <ENTRY>Void reason code</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>900</KEY>
+     <ENTRY>Check numbers currently blocked by ;</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>901</KEY>
+     <ENTRY>user                               ;</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>902</KEY>
+     <ENTRY>Repeat attempt to print            ;</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>903</KEY>
+     <ENTRY>check print?                       ;</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>904</KEY>
+     <ENTRY>Data blocked</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>910</KEY>
+     <ENTRY>Print check</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>911</KEY>
+     <ENTRY>Reprint check for document &amp;</ENTRY>
+     <LENGTH>41</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>912</KEY>
+     <ENTRY>You have canceled the &quot;Post and print form&quot; transaction</ENTRY>
+     <LENGTH>65</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>913</KEY>
+     <ENTRY>without printing any checks. Consequently, the check for payment document</ENTRY>
+     <LENGTH>73</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>914</KEY>
+     <ENTRY>                   &amp; &amp; &amp;</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>915</KEY>
+     <ENTRY>must be printed again. Please use the option to print the</ENTRY>
+     <LENGTH>68</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>916</KEY>
+     <ENTRY>the check when you run this document.</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>International Payment Medium - Check (with check management)</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ANZP</KEY>
+     <ENTRY>Number of sample printouts</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BELP</KEY>
+     <ENTRY>Payment document validation</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ESPR</KEY>
+     <ENTRY>Texts in recipient&apos;s language</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_FILL</KEY>
+     <ENTRY>Filler for digits in words</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ISOC</KEY>
+     <ENTRY>Currency in ISO code</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LAUD</KEY>
+     <ENTRY>Run date (old checks)(reprint)</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LAUI</KEY>
+     <ENTRY>Run ID (old checks)(reprint)</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_MAXP</KEY>
+     <ENTRY>No.of items in payment summary</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_NENQ</KEY>
+     <ENTRY>Enqueue performed by call.prog</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_NOSU</KEY>
+     <ENTRY>No form summary section</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_RCHK</KEY>
+     <ENTRY>Restart from check number</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_VOID</KEY>
+     <ENTRY>Void reason code</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ZFOR</KEY>
+     <ENTRY>Alternative check form</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_GSBR</KEY>
+     <ENTRY>Business area</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_HBKI</KEY>
+     <ENTRY>House bank</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_HKTI</KEY>
+     <ENTRY>Account ID</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_UZAW</KEY>
+     <ENTRY>Payment method supplement</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_VBLN</KEY>
+     <ENTRY>Payment document number</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_WAER</KEY>
+     <ENTRY>Currency key</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_ZAWE</KEY>
+     <ENTRY>Payment methods</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>100</KEY>
+       <ENTRY>Schecks neu drucken</ENTRY>
+       <LENGTH>19</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>101</KEY>
+       <ENTRY>Bereits gedruckte Schecks des Zahllaufs entwerten und erneut drucken</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>106</KEY>
+       <ENTRY>Scheckstapelnummer</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>107</KEY>
+       <ENTRY>Ungültigkeitsgrund</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>900</KEY>
+       <ENTRY>Schecknummern sind durch Benutzer</ENTRY>
+       <LENGTH>35</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>901</KEY>
+       <ENTRY>zur Zeit gesperrt.</ENTRY>
+       <LENGTH>35</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>902</KEY>
+       <ENTRY>Soll ein erneuter Versuch für den</ENTRY>
+       <LENGTH>35</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>903</KEY>
+       <ENTRY>Scheckdruck gestartet werden?</ENTRY>
+       <LENGTH>35</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>904</KEY>
+       <ENTRY>Daten gesperrt</ENTRY>
+       <LENGTH>35</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>910</KEY>
+       <ENTRY>Scheckdruck</ENTRY>
+       <LENGTH>12</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>911</KEY>
+       <ENTRY>Bitte Scheck zu Beleg &amp; nachdrucken</ENTRY>
+       <LENGTH>41</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>912</KEY>
+       <ENTRY>Die Transaktion &apos;Buchen + Formulardruck&apos; wurde von Ihnen ohne den</ENTRY>
+       <LENGTH>65</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>913</KEY>
+       <ENTRY>Druck von Schecks abgebrochen. Daher muß der Scheck zum Zahlungsbeleg</ENTRY>
+       <LENGTH>69</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>914</KEY>
+       <ENTRY>                   &amp; &amp; &amp;</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>915</KEY>
+       <ENTRY>nachgeholt werden. Bitte verwenden Sie die Möglichkeit zum Druck des</ENTRY>
+       <LENGTH>68</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>916</KEY>
+       <ENTRY>Schecks, indem Sie dieses Dokument ausführen.</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Zahlungsträger International - Scheck (mit Scheckverwaltung)</ENTRY>
+       <LENGTH>60</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ANZP</KEY>
+       <ENTRY>Anzahl Probedrucke</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_AVIS</KEY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BEGL</KEY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BELP</KEY>
+       <ENTRY>Zahlungsbeleg-Verprobung</ENTRY>
+       <LENGTH>32</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_CHKF</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_CHKT</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_DTYP</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ESPR</KEY>
+       <ENTRY>Texte in Empfängersprache</ENTRY>
+       <LENGTH>33</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_FILL</KEY>
+       <ENTRY>Füllzeichen Ziffern in Worten</ENTRY>
+       <LENGTH>37</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ISOC</KEY>
+       <ENTRY>Währung in ISO-Code</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LAUD</KEY>
+       <ENTRY>Laufd alter Schecks (Neudruck)</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LAUI</KEY>
+       <ENTRY>Laufi alter Schecks (Neudruck)</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_MAXP</KEY>
+       <ENTRY>Postenzahl Begleitliste</ENTRY>
+       <LENGTH>31</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_NENQ</KEY>
+       <ENTRY>Enqueue erfolgt durch Rufer</ENTRY>
+       <LENGTH>35</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_NEUD</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_NOSU</KEY>
+       <ENTRY>Kein Formularabschluß</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_PRIA</KEY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_PRIB</KEY>
+       <LENGTH>32</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_PRIW</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_PRIZ</KEY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_RCHK</KEY>
+       <ENTRY>Restart ab Schecknummer</ENTRY>
+       <LENGTH>31</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFA</KEY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFB</KEY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFO</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFW</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFZ</KEY>
+       <LENGTH>31</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_STAP</KEY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_UNIX</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VARI</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VOID</KEY>
+       <ENTRY>Ungültigkeitsgrund</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XDTA</KEY>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ZDRU</KEY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ZFOR</KEY>
+       <ENTRY>Abweichendes Scheckformular</ENTRY>
+       <LENGTH>35</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_GSBR</KEY>
+       <ENTRY>Geschäftsbereich</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_HBKI</KEY>
+       <ENTRY>Hausbank</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_HKTI</KEY>
+       <ENTRY>Konto-Id</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_UZAW</KEY>
+       <ENTRY>Zahlwegzusatz</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_VBLN</KEY>
+       <ENTRY>Zahlungsbelegnummer</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_WAER</KEY>
+       <ENTRY>Währungsschlüssel</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_ZAWE</KEY>
+       <ENTRY>Zahlwege</ENTRY>
+       <LENGTH>16</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

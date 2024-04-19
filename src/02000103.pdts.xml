@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PDTS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PDTS>
+    <SHORT_TEXT>ZMM_DECISION</SHORT_TEXT>
+    <PLVAR>01</PLVAR>
+    <WI_TEXT>Decide about available alternatives for Schedule Agreement &amp;IV_EBELN&amp;</WI_TEXT>
+    <METHOD>
+     <OTYPE>TS</OTYPE>
+     <OBJID>02000103</OBJID>
+     <SWOTP>DECISION</SWOTP>
+     <SWMTD>PROCESS</SWMTD>
+     <METHTYPE>BO</METHTYPE>
+     <SYNCHRON>X</SYNCHRON>
+     <TSKRELSTAT>R</TSKRELSTAT>
+     <WEB_ABLE>X</WEB_ABLE>
+    </METHOD>
+    <DESCRIPTIONS>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>Purchase Schedule Agreement is rejected by &amp;RejectedByUser&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TLINE>Following are rejection comments:</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000003</TABSEQNR>
+      <TLINE>&amp;RejectComments&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0121</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>User &amp;_Workitem.ExecutedByUser.Name&amp; made the user decision.</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0122</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>The deadline set in the workflow definition for the decision has passed.</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0123</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>The deadline set in the workflow definition for the requested end for</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0123</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TLINE>the decision has been missed.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0124</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>The deadline set in the workflow definition for the latest start for the</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000103</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0124</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TLINE>decision has been missed.</TLINE>
+     </HRS1002>
+    </DESCRIPTIONS>
+   </PDTS>
+   <CONTAINER>
+    <CONTAINER>
+     <PROPERTIES>
+      <OWN_ID>
+       <INSTID>TS02000103</INSTID>
+       <TYPEID>CL_SWF_CNT_HRS_PERSISTENCE</TYPEID>
+       <CATID>CL</CATID>
+      </OWN_ID>
+      <PROPSTRING>23000000000008</PROPSTRING>
+      <XMLVERSION>0002</XMLVERSION>
+      <INTERNAL>X</INTERNAL>
+      <EXDEFINITN>
+       <NAME>_DEF_EXT</NAME>
+       <POR>
+        <INSTID>DIALOG_STEP_CONTAINER</INSTID>
+        <TYPEID>CL_SWF_CNT_PERSISTENCE_DEF_EXT</TYPEID>
+        <CATID>CL</CATID>
+       </POR>
+      </EXDEFINITN>
+     </PROPERTIES>
+     <ELEMENTS>
+      <L NAME="EXTENDED:Extended:" TYPE="::SYST-INPUT:C:1:0" PROPS="0C003201"/>
+      <M NAME="NOTE_REFERENCE:Note_Reference:" TYPE="SOFM:BO::u:0:0" PROPS="0C921201"/>
+      <N NAME="DECISION_NOTE:Decision_Note:" TYPE="SOFM:BO:::0:0" PROPS="0C920B01"/>
+      <O NAME="REJECTCOMMENTS:RejectComments:" TYPE="::WFSYST-RESULT:C:255:0" PROPS="0C003201"/>
+      <P NAME="IV_EBELN:Iv_ebeln:" TYPE="::EKKO-EBELN:C:10:0" PROPS="0C003201"/>
+      <Q NAME="REJECTEDBY:rejectedby:" TYPE="::WFSYST-AGENT:C:14:0" PROPS="0C002201"/>
+      <R NAME="REJECTEDBYUSER:RejectedByUser:" TYPE="::USR21-BNAME:C:12:0" PROPS="0C003201"/>
+     </ELEMENTS>
+    </CONTAINER>
+   </CONTAINER>
+  </asx:values>
+ </asx:abap>
+</abapGit>

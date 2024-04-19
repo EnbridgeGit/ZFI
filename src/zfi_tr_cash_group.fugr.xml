@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Treasury Cash Group Report</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_TR_CASH_GROUPTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_TR_CASH_GROUP</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_TR_CASH_GROUP</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Cash Group Data</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>S_ACCT</PARAMETER>
+       <DBSTRUCT>ZFAP_BANK_ACC_NO</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>S_CASH</PARAMETER>
+       <DBSTRUCT>ZFTR_CASH_GRP</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_T038</PARAMETER>
+       <DBSTRUCT>ZFTR_T038</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_T012K</PARAMETER>
+       <DBSTRUCT>ZFTR_T012K</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_T012K2</PARAMETER>
+       <DBSTRUCT>ZFTR_T012K</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_T001</PARAMETER>
+       <DBSTRUCT>ZFTR_T001</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_T012T</PARAMETER>
+       <DBSTRUCT>ZFTR_T012T</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>S_ACCT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges Structures for Bank Account Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>S_CASH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges Structures for Cash Grouping</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_T038</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>T038 Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_T012K</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>T012K Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_T012K2</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>T012K Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_T001</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>T001 Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_T012T</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>T012T Data</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PDTS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PDTS>
+    <SHORT_TEXT>ZGETEMAIL</SHORT_TEXT>
+    <PLVAR>01</PLVAR>
+    <WI_TEXT>Get Email Addresses</WI_TEXT>
+    <METHOD>
+     <OTYPE>TS</OTYPE>
+     <OBJID>02000036</OBJID>
+     <SWOTP>BUS2089</SWOTP>
+     <SWMTD>GET_EMAILS</SWMTD>
+     <METHTYPE>BO</METHTYPE>
+     <BACKGROUND>X</BACKGROUND>
+     <SYNCHRON>X</SYNCHRON>
+    </METHOD>
+   </PDTS>
+   <CONTAINER>
+    <CONTAINER>
+     <PROPERTIES>
+      <OWN_ID>
+       <INSTID>TS02000036</INSTID>
+       <TYPEID>CL_SWF_CNT_HRS_PERSISTENCE</TYPEID>
+       <CATID>CL</CATID>
+      </OWN_ID>
+      <PROPSTRING>23000000000008</PROPSTRING>
+      <XMLVERSION>0002</XMLVERSION>
+      <INTERNAL>X</INTERNAL>
+      <EXDEFINITN>
+       <NAME>_DEF_EXT</NAME>
+       <POR>
+        <INSTID>DIALOG_STEP_CONTAINER</INSTID>
+        <TYPEID>CL_SWF_CNT_PERSISTENCE_DEF_EXT</TYPEID>
+        <CATID>CL</CATID>
+       </POR>
+      </EXDEFINITN>
+     </PROPERTIES>
+     <ELEMENTS>
+      <L NAME="EMAILS:Emails:" TYPE="::ADR6-SMTP_ADDR:h:241:0" PROPS="0C006B41"/>
+      <M NAME="INITIATOR:Initiator:" TYPE="::WFSYST-INITIATOR:C:14:0" PROPS="0C003301"/>
+      <N NAME="USERID:UserID:" TYPE="::WFSYST-AGENT:C:14:0" PROPS="0C002B01"/>
+      <O NAME="INITIATOR_OBJ:Initiator_obj:" TYPE="USR01DOHR:BO:::0:0" PROPS="0C920B01"/>
+     </ELEMENTS>
+    </CONTAINER>
+   </CONTAINER>
+  </asx:values>
+ </asx:abap>
+</abapGit>

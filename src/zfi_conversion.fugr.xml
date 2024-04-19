@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Custom conversion exits for FI</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_CONVERSIONTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_CONVERSION</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFI_CONVERT_AMT_NEGATIVE</FUNCNAME>
+     <SHORT_TEXT>Convert Amount field in ALV to (-) in front</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_WAERS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>WAERS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>C_WRBTR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ACBTR</TYP>
+      </RSCHA>
+     </CHANGING>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_AMOUNT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>STRING</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_WAERS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Currency Key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_AMOUNT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>C_WRBTR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Amount or tax amount in the currency of the currency types</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SXCI" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SXCI>
+    <IMPLEMENTATION_DATA>
+     <IMP_NAME>ZTRIP_POST_FI</IMP_NAME>
+     <TEXT>Badi-FITV -TRIP_POST_FI</TEXT>
+     <IMP_CLASS>ZCL_IM_TRIP_POST_FI</IMP_CLASS>
+     <EXIT_NAME>TRIP_POST_FI</EXIT_NAME>
+     <INTER_NAME>IF_EX_TRIP_POST_FI</INTER_NAME>
+     <ACTIVE>X</ACTIVE>
+    </IMPLEMENTATION_DATA>
+    <FILTERS>
+     <item>
+      <FLT_VAL>*</FLT_VAL>
+     </item>
+    </FILTERS>
+   </SXCI>
+  </asx:values>
+ </asx:abap>
+</abapGit>

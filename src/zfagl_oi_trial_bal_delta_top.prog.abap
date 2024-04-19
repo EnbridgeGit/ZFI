@@ -1,0 +1,112 @@
+*&---------------------------------------------------------------------*
+*&  Include           ZFAGL_OI_TRIAL_BAL_DELTA_TOP
+*&---------------------------------------------------------------------*
+
+TABLES: faglflext, t001.
+
+TYPES: BEGIN OF ty_data,
+         ledger        TYPE text40,
+         transaction   TYPE text40,
+         rep_period    TYPE text10,
+         eff_date      TYPE text10,
+         currency      TYPE waers,
+         compancy_code TYPE bukrs,
+         trade_partner TYPE text10,
+         kostl         TYPE kostl,
+         cfa           TYPE zzref,
+         aufnr         TYPE aufnr,
+         settle_period TYPE text10,
+         wbs           TYPE ps_psp_pnr,
+         location      TYPE c,
+         prctr         TYPE prctr,
+         amount        TYPE hslvt12,
+         h_var1        TYPE c,
+         h_var2        TYPE c,
+         h_var3        TYPE c,
+         l_var1        TYPE c,
+         l_var2        TYPE c,
+         l_var3        TYPE c,
+       END OF ty_data,
+
+       BEGIN OF ty_lastday,
+         month(2) TYPE c,
+         day(2)   TYPE c,
+         year(4)  TYPE c,
+       END OF ty_lastday,
+
+        BEGIN OF ty_t001,
+        bukrs TYPE bukrs,
+        waers TYPE waers,
+       END OF ty_t001,
+
+       BEGIN OF ty_delta,
+           ryear  TYPE gjahr,
+           racct  TYPE racct,
+           rbukrs	TYPE bukrs,
+           rcntr  TYPE kostl,
+           rtcur  TYPE rtcur,
+           prctr  TYPE prctr,
+           hslvt  TYPE hslvt12,
+           hsl01  TYPE hslxx12,
+           hsl02  TYPE hslxx12,
+           hsl03  TYPE hslxx12,
+           hsl04  TYPE hslxx12,
+           hsl05  TYPE hslxx12,
+           hsl06  TYPE hslxx12,
+           hsl07  TYPE hslxx12,
+           hsl08  TYPE hslxx12,
+           hsl09  TYPE hslxx12,
+           hsl10  TYPE hslxx12,
+           hsl11  TYPE hslxx12,
+           hsl12  TYPE hslxx12,
+           hsl13  TYPE hslxx12,
+           hsl14  TYPE hslxx12,
+           hsl15  TYPE hslxx12,
+           hsl16  TYPE hslxx12,
+           timestamp TYPE timestamp,
+         END OF ty_delta,
+
+       ty_t_zfi_trial_bal TYPE STANDARD TABLE OF zfi_trial_bal.
+
+
+DATA: gt_faglflext       TYPE STANDARD TABLE OF ty_delta,
+      gt_hist_trial_bal  TYPE STANDARD TABLE OF zfi_trial_bal,
+      gt_cur_trial_bal   TYPE STANDARD TABLE OF zfi_trial_bal,
+       gt_current_bal    TYPE STANDARD TABLE OF zfi_trial_bal,
+      gt_hist_bal_del    TYPE STANDARD TABLE OF zfi_trial_bal,
+      gt_upd_recs        TYPE STANDARD TABLE OF zfi_trial_bal,
+      gt_t001            TYPE STANDARD TABLE OF ty_t001,
+      gt_last_days       TYPE STANDARD TABLE OF ty_lastday,
+      gt_file            TYPE truxs_t_text_data,
+      gt_usfile          TYPE truxs_t_text_data,
+      gt_raw_faglflext   TYPE STANDARD TABLE OF ty_delta,
+      gv_ccm             TYPE text12,
+      gv_file_ok         TYPE c,
+       gv_dperiod(7)     TYPE c,
+      gt_data            TYPE STANDARD TABLE OF ty_data,
+      gv_lines(10)       TYPE n,
+      gv_updates(10)     TYPE n.
+
+*Data declaration for ALV
+DATA: gt_fieldcatalog TYPE slis_t_fieldcat_alv,
+      gr_container TYPE REF TO cl_gui_custom_container,
+      gt_fcat         TYPE lvc_t_fcat,
+      gd_layout       TYPE slis_layout_alv,
+      gs_layo         TYPE lvc_s_layo,
+      gd_repid        LIKE sy-repid,
+      gt_events       TYPE slis_t_event,
+      gd_prntparams   TYPE slis_print_alv.
+
+DATA: account	                TYPE racct,
+      reporting_period(10)    TYPE c,
+      company_code            TYPE bukrs,
+      currency                TYPE  waers,
+      cost_center             TYPE  kostl,
+      co_order(6)             TYPE c,
+      pm_order(8)             TYPE c,
+      financial_asset(15)     TYPE c,
+      wbs(18)                 TYPE c.
+
+FIELD-SYMBOLS: <cur_bal>     LIKE LINE OF gt_cur_trial_bal,
+               <current_bal> LIKE LINE OF gt_current_bal,
+               <upd_rec>     LIKE LINE OF gt_upd_recs.

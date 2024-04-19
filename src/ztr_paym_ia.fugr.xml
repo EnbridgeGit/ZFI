@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Treasury Payment File</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZTR_PAYM_IAF02</SOBJ_NAME>
+    <SOBJ_NAME>LZTR_PAYM_IATOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZTR_PAYM_IA</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZTR_PAYM_IA_DME_SUB_FILE_HNDLR</FUNCNAME>
+     <SHORT_TEXT>Treasury Payment File</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_LAUFD</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>LAUFD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_LAUFI</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>LAUFI</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_XVORL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XVORL_FPM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_XDME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XDME1_FPM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_XDME_FILE_SYSTEM</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>DFILESYST</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DME_FILE_NAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>FSNAM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DME_FILE_NAME_SCREEN</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>FSNAM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>SUBMIT_TO_IA_ERROR</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_LAUFD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Date on Which the Program Is to Be Run</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_LAUFI</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Additional Identification</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_XVORL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Indicator: Proposal Run</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_XDME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Indicator: Payment Medium w/o Documents (DME, EDI, OFX)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_XDME_FILE_SYSTEM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Filesystem (Temse, ...)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DME_FILE_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>File Name in the File System</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DME_FILE_NAME_SCREEN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>File Name in the File System</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SUBMIT_TO_IA_ERROR</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

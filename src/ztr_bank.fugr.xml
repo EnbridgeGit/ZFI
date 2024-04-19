@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>FG for Bank inptut files:Streamline proj</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZTR_BANKTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZTR_BANK</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZTR_GET_T028Q_INSTANCE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>RFC for T028Q Data</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>TBL_T028Q</PARAMETER>
+       <DBSTRUCT>T028Q</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>TBL_T028Q</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Mapping Table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

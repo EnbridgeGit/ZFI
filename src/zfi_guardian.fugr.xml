@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function Group for Guardian</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_GUARDIANF01</SOBJ_NAME>
+    <SOBJ_NAME>LZFI_GUARDIANTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_GUARDIAN</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZBAPI_IO_ACTUAL_COST</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>IO Actual Cost (DSM CO Actuals)</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_GROUPNAME</PARAMETER>
+       <TYP>BAPICO_GROUP-GROUPNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_FISCALYEAR</PARAMETER>
+       <TYP>GJAHR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_IO_DATA</PARAMETER>
+       <TYP>ZFI_IO_DATA_TAB</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_IO_ASSIGNED_TO_GROUP</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_GROUPNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Group name</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_FISCALYEAR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Fiscal Year</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_IO_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table type for Guardian IO RFC</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_IO_ASSIGNED_TO_GROUP</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No Internal Orders Assigned to Group</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZBAPI_VENDOR_DETAILS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get Vendor Detail</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_VENDORNO</PARAMETER>
+       <TYP>BAPIVENDOR_01-VENDOR_NO</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_COMPANYCODE</PARAMETER>
+       <DEFAULT>&apos;UGL&apos;</DEFAULT>
+       <TYP>BAPIVENDOR_01-COMP_CODE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ES_GENERALDETAIL</PARAMETER>
+       <TYP>ZFI_VENDOR_GENDATA</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_RECORD_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_VENDORNO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Account Number of Vendor or Creditor</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_COMPANYCODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Company Code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ES_GENERALDETAIL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vendor General Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_RECORD_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No records found.</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZBAPI_VENDOR_LIST_LOOKUP</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Vendor List Lookup</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_NAME1</PARAMETER>
+       <TYP>NAME1_GP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_NAME2</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>NAME2_GP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_POSTAL_CODE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>PSTLZ</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_COMPANYCODE</PARAMETER>
+       <DEFAULT>&apos;UGL&apos;</DEFAULT>
+       <TYP>BAPIVENDOR_01-COMP_CODE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_GENERALDETAIL</PARAMETER>
+       <TYP>ZFI_VENDOR_GENDATA_TAB</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_RECORD_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_NAME1</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name 1</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_NAME2</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name 2</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_POSTAL_CODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Postal Code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_COMPANYCODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Company Code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_GENERALDETAIL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vendor General Data - Table Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_RECORD_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Error. No records found.</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

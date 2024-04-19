@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PDTS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PDTS>
+    <SHORT_TEXT>ZAPinv_DECI</SHORT_TEXT>
+    <PLVAR>01</PLVAR>
+    <WI_TEXT>Approve the Invoice &amp;INVOICE.INVOICEDOCNUMBER&amp; for a Service Based PO with Value $ &amp;AMOUNT&amp;</WI_TEXT>
+    <METHOD>
+     <OTYPE>TS</OTYPE>
+     <OBJID>02000010</OBJID>
+     <SWOTP>DECISION</SWOTP>
+     <SWMTD>PROCESS</SWMTD>
+     <METHTYPE>BO</METHTYPE>
+     <SYNCHRON>X</SYNCHRON>
+     <TSKRELSTAT>R</TSKRELSTAT>
+     <WEB_ABLE>X</WEB_ABLE>
+    </METHOD>
+    <DESCRIPTIONS>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>&amp;POSTERROR&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000003</TABSEQNR>
+      <TLINE>&amp;WC_RETURN##&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000004</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000005</TABSEQNR>
+      <TLINE>&amp;COMMENTS##&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000006</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000007</TABSEQNR>
+      <TLINE>The attached invoice was received from vendor:</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000008</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000009</TABSEQNR>
+      <TLINE>&amp;INVOICE.INVOICINGPARTY.VENDORNO&amp; &amp;INVOICE.INVOICINGPARTY.NAME&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000010</TABSEQNR>
+      <TLINE>&amp;INVOICE.INVOICINGPARTY.STREET&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000011</TABSEQNR>
+      <TLINE>&amp;INVOICE.INVOICINGPARTY.CITY&amp; &amp;INVOICE.INVOICINGPARTY.COUNTRY&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000012</TABSEQNR>
+      <TLINE>&amp;INVOICE.INVOICINGPARTY.POSTALCODE&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000013</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000014</TABSEQNR>
+      <TLINE>You are responsible for the approval of</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000015</TABSEQNR>
+      <TLINE>Invoice#:&amp;INVOICE.INVOICEDOCNUMBER&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000016</TABSEQNR>
+      <TLINE>Total Value:$&amp;INVOICE.GROSSINVOICEAMOUNT&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0121</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>User &amp;_Workitem.ExecutedByUser.Name&amp; made the</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0121</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TLINE>user decision.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0122</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>The latest end set in the workflow definition for the decision has</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0122</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TLINE>passed.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0123</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>The deadline set in the workflow definition for the requested end</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0123</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TLINE>for the decision has been missed.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0124</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>The deadline set in the workflow definition for the latest start</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000010</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0124</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TLINE>for the decision has been missed.</TLINE>
+     </HRS1002>
+    </DESCRIPTIONS>
+   </PDTS>
+   <CONTAINER>
+    <CONTAINER>
+     <PROPERTIES>
+      <OWN_ID>
+       <INSTID>TS02000010</INSTID>
+       <TYPEID>CL_SWF_CNT_HRS_PERSISTENCE</TYPEID>
+       <CATID>CL</CATID>
+      </OWN_ID>
+      <PROPSTRING>23000000000008</PROPSTRING>
+      <XMLVERSION>0002</XMLVERSION>
+      <INTERNAL>X</INTERNAL>
+      <EXDEFINITN>
+       <NAME>_DEF_EXT</NAME>
+       <POR>
+        <INSTID>DIALOG_STEP_CONTAINER</INSTID>
+        <TYPEID>CL_SWF_CNT_PERSISTENCE_DEF_EXT</TYPEID>
+        <CATID>CL</CATID>
+       </POR>
+      </EXDEFINITN>
+     </PROPERTIES>
+     <ELEMENTS>
+      <L NAME="INVOICE::" TYPE="BUS2081:BO::u:0:0" PROPS="8C921001"/>
+      <M NAME="EXTENDED:Extended:" TYPE="::SYST-INPUT:C:1:0" PROPS="0C003201"/>
+      <N NAME="NOTE_REFERENCE:Note_Reference:" TYPE="SOFM:BO::u:0:0" PROPS="0C921201"/>
+      <O NAME="DECISION_NOTE:Decision_Note:" TYPE="SOFM:BO:::0:0" PROPS="0C920B01"/>
+      <P NAME="COMMENTS:Comments:" TYPE="::CHAR80:h:80:0" PROPS="0C004241"/>
+      <Q NAME="POSTERROR::" TYPE="::CHAR80:C:80:0" PROPS="0C001201"/>
+      <R NAME="WC_RETURN::" TYPE="::BAPIRET2:h:0:0" PROPS="0C0052C1"/>
+      <S NAME="TC_AMOUNT:TC_Amount:" TYPE="::RMWWR:P:7:2" PROPS="0C001201"/>
+     </ELEMENTS>
+    </CONTAINER>
+   </CONTAINER>
+  </asx:values>
+ </asx:abap>
+</abapGit>

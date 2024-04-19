@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZFAPC001</NAME>
+    <SUBC>1</SUBC>
+    <APPL>F</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>H</ID>
+     <KEY>001</KEY>
+    </item>
+    <item>
+     <ID>H</ID>
+     <KEY>002</KEY>
+    </item>
+    <item>
+     <ID>H</ID>
+     <KEY>003</KEY>
+    </item>
+    <item>
+     <ID>H</ID>
+     <KEY>004</KEY>
+     <ENTRY>Bank Key  Name                                 Branch                               Address                             City</ENTRY>
+     <LENGTH>124</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>AP: Conversion of Bank Record Data</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>FNAME</KEY>
+     <ENTRY>Logical File Name</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>TESTRUN</KEY>
+     <ENTRY>Execute Test Run Only</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+   </TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

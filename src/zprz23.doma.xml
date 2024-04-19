@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZPRZ23</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>DEC</DATATYPE>
+    <LENG>000007</LENG>
+    <OUTPUTLEN>000009</OUTPUTLEN>
+    <DECIMALS>000003</DECIMALS>
+    <DDTEXT>Packed percentage rate NN,NNN</DDTEXT>
+    <APPLCLASS>SAP</APPLCLASS>
+    <DOMMASTER>E</DOMMASTER>
+   </DD01V>
+   <I18N_LANGS>
+    <LANGU>D</LANGU>
+   </I18N_LANGS>
+   <DD01_TEXTS>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Copy of Prozentsatz gepackt NN,NNN copied from PRZ23</DDTEXT>
+    </item>
+   </DD01_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>FM for IAP Cross-Reference Invoice Group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_IAPTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_IAP</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFI_IAP_XREF_AD</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>RFC FM to retrieve the IAP Cross-Reference Document ID</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>IAP_DOC_ID</PARAMETER>
+       <DBSTRUCT>ZAPS_IAP_DOC_ID</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IAP_XREF_AD</PARAMETER>
+       <DBSTRUCT>ZAPT_IAP_XREF_AD</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IAP_DOC_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IAP_XREF_AD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Cross-Reference Table for Accounting Documents</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFI_IAP_XREF_VM</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Vendor Number for Vendor Image interface</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>IAP_DOC_ID</PARAMETER>
+       <DBSTRUCT>ZAPS_IAP_DOC_ID</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IAP_XREF_VM</PARAMETER>
+       <DBSTRUCT>ZAPS_IAP_XREF_VM</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IAP_DOC_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Document ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IAP_XREF_VM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IAP Cross-Reference Table for Vendor Master</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

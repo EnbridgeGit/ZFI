@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZFITA_MSG</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>FI-TV Message Class</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Corporate Card expense cannot be paid to Employee on Line &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Out-of-pocket entry cannot be paid to Corporate card in Line &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Barcode table was not updated for &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Company Code &amp; entered on Line &amp; has invalid account</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Company Code &amp; entered at Header level has invalid accounting on Line &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Employee Default Company Code &amp; has invalid accounting on Line &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Company Code &amp; entered for Mileage is invalid for Mileage accounting</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Company Code &amp; entered at Header level is invalid for Mileage accounting</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Employee Default Company Code &amp; is Invalid for Mileage accounting</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>009</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Line &amp; has a 0 dollar value, please correct.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Travel Expense &amp; cannot be used for Out Of Pocket Expenses on Line &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Please select a valid Expense Type for Line &amp;.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFITA_MSG</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>ACTION:Select expense types for Generic MasterCard Trasnsactions (Z000)</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

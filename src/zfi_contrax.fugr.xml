@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>FI Contrax FM</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFI_CONTRAXTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFI_CONTRAX</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFI_CONTRAX_00001420</FUNCNAME>
+     <SHORT_TEXT>Beschreibung der Prozess-Schnittstelle 00001420</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BKPF</PARAMETER>
+       <DBFIELD>BKPF</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BSEG</PARAMETER>
+       <DBFIELD>BSEG</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_AKTYP</PARAMETER>
+       <DBFIELD>T020-AKTYP</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_NOINPUT</PARAMETER>
+       <DBSTRUCT>OFIBM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_INVISIBLE</PARAMETER>
+       <DBSTRUCT>OFIBM</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegkopf</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegzeile</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_AKTYP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aktivitätstyp der rufenden Transaktion</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_NOINPUT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle nicht Eingabe bereiter Felder</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_INVISIBLE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle ausgeblendete Felder</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFI_CONTRAX_00001430</FUNCNAME>
+     <SHORT_TEXT>Schnittstellenbeschreibung</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BKDF</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BKDF</TYP>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>I_BKDFSUB</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BKDF_SUBST</TYP>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_BKPF</PARAMETER>
+       <DBSTRUCT>BKPF</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BSEG</PARAMETER>
+       <DBSTRUCT>BSEG</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BSEC</PARAMETER>
+       <DBSTRUCT>BSEC</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BKPFSUB</PARAMETER>
+       <DBSTRUCT>BKPF_SUBST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BSEGSUB</PARAMETER>
+       <DBSTRUCT>BSEG_SUBST</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BKDF</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BKPF</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSEG</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSEC</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BKPFSUB</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSEGSUB</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BKDFSUB</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <LONGTEXTS_ZFI_CONTRAX_00001420>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFI_CONTRAX_00001420</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0011</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00019</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFI_CONTRAX_00001420</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00011</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Dynpromodifikation Belegzeilen&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00001420&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PROCESS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Prozess wird vor Prozessieren des Belegzeilen-Dynpros durchlaufen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>SCHNITTSTELLE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>An die Zusatzkomponente werden die aktuellen Inhalte der Belegkopf-</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Felder und der Belegzeile übergeben. In einem Zusatz-Baustein kann in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Abhängigkeit dieser Inhalte besimmt werden, welche sichtbaren Felder</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ausgeblendet werden sollen und bei welchen eingabebereiten Feldern die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Eingabebereitschaft zurückgenommen werden soll. Dies ist jeweils durch</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>einen Eintrag in die Tabelle T_NOINPUT bzw. T_INVISIBLE möglich. Diese</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Tabellen werden leer an den Zusatzbaustein übergeben. Ein Eintrag des</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Feldes BSEG-SGTXT in der Tabelle T_INVISIBLE verursacht ein Ausblenden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>des Felders Segmenttext.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Eine Ausnahme bildet die Möglichkeit, Änderungen an Langtexten eines</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Beleges zu verbieten. Um dies zu erreichen, erzeugen Sie in der Tabelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>einen Eintrag mit dem Inhalt &apos;OF05L-LTEXT&apos;.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFI_CONTRAX_00001420</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0011</VERSION>
+      <TXTLINES>00019</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFI_CONTRAX_00001420</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00011</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Line item screen modification&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00001420&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX LANGUAGE EN</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PROCESS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This process is run before the line item screen is processed.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>INTERFACE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The current contents of the document header fields and of the line item</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>are transferred to the additional component. Using this data, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>system can determine which fields that are currently visible should be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>hidden, and which fields that are currently ready for input should no</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>longer be so. This is made possible by making an entry in the relevant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>table, T_NOINPUT or T_INVISIBLE. These tables are blank when they are</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>transferred to the additional function module. If you enter the field</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>BSEG-SGTXT in table T_INVISIBLE, the field &quot;Segment text&quot; is no longer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>visible.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>An exception enables you to prevent changes being made to the long</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>texts of a document. To implement this feature, generate the entry</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&apos;OF05L-LTEXT&apos; in the table.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS_ZFI_CONTRAX_00001420>
+   <LONGTEXTS_ZFI_CONTRAX_00001430>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFI_CONTRAX_00001430</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00023</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFI_CONTRAX_00001430</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp; = &apos;ÄNDERN BELEG: Feldsubstitution Kopf/Zeile&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00001430&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp; = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>LOCATION</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Prozess wird immer dann erreicht, wenn vor dem Ändern eines Beleges</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sämtliche Schlußprüfungen abgeschlossen sind.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>INTERFACE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>An die Zusatzkomponente werden (nur für Informationszwecke) die aktuell</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Belegköpfe (mehr als einer z.B. bei buchungskreisübergreifenden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Vorgängen) und die korrespondierenden Belegzeilen übergeben. Diese</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Daten dürfen nicht bearbeitet werden. Stattdessen werden zwei weitere</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Tabellen (T_BKPFSUB, T_BSEGSUB) übergeben. Diese sind gefüllt mit den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Inhalten der Felder, die substituierbar sind. Das Feld TABIX enthält</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>eine Zeilennummer, die anzeigt aus welcher Zeile in T_BSEG bzw. T_BKPF</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die Feldinhalte stammen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beispiel:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>In der 2. Zeile der Tabelle T_BSEG soll der Feldinhalt von SGTXT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Positionstext) mit dem Inhalt &apos;TEST&apos; substituiert werden. Das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erfordert im wesentlichen eine Anweisungsfolge der Form</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>READ TABLE T_BSEGSUB WITH KEY TABIX = 2.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>T_BSEGSUB-SGTXT = &apos;TEST&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>MODIFY T_BSEGSUB INDEX SY-TABIX.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFI_CONTRAX_00001430</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <TXTLINES>00022</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFI_CONTRAX_00001430</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp; = &apos;CHANGE DOCUMENT: Header/line field substitution&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00001430&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp; = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX LANGUAGE EN</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>LOCATION</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This process is always reached when all the final checks have been</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>completed before a document is changed.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>INTERFACE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The current document headers (there will be more than one for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>cross-company code transactions, for example) and corresponding line</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>items are transferred to the additional component, for information</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>purposes only. You must not edit this data. Instead, two additional</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>tables (T_BKPFSUB and T_BSEGSUB) are also transferred. The contents of</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the fields that can be substituted are entered in these tables. Field</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>TABIX contains a line number which shows from which line in T_BSEG or</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>T_BKPF the field contents originate.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In the second line of table T_BSEG, the field contents from SGTXT (item</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>text) should be replaced by the entry &apos;TEST&apos;. This basically requires a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>statement sequence in the form</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>READ TABLE T_BSEGSUB WITH KEY TABIX = 2.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>T_BSEGSUB-SGTXT = &apos;TEST&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>MODIFY T_BSEGSUB INDEX SY-TABIX.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS_ZFI_CONTRAX_00001430>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZTAX</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>DMA Tax Utilities</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Please specify a goods-issue date range</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>&amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>003</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Please specify either a cost center or internal order</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Please specify an order type</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Please specify an order reason</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>100</MSGNR>
+     <TEXT>Please specify a posting date range</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>101</MSGNR>
+     <TEXT>Error displaying document image</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>102</MSGNR>
+     <TEXT>Please specify either a company code or a posting date range</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>103</MSGNR>
+     <TEXT>Error opening file &amp; on server</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>104</MSGNR>
+     <TEXT>Error writing file &amp; on PC</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>105</MSGNR>
+     <TEXT>File &amp; created on PC</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>106</MSGNR>
+     <TEXT>To execute a file transfer, specify both the input and output file name</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>107</MSGNR>
+     <TEXT>Please specify a company code</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>108</MSGNR>
+     <TEXT>Specify G/L accounts to reconcile</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZTAX</ARBGB>
+     <MSGNR>109</MSGNR>
+     <TEXT>When using the reconciliation option, specify exactly one company code</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

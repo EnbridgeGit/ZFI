@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZFI_AUDIT_EXTRACT</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>FI table extract class</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>E01</KEY>
+     <ENTRY>Please enter valid table name</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E02</KEY>
+     <ENTRY>Please enter valid field name</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E03</KEY>
+     <ENTRY>No data found</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T01</KEY>
+     <ENTRY>Enter valid value in input field</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>W01</KEY>
+     <ENTRY>Plz use</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>W02</KEY>
+     <ENTRY>for best user experience</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>BUILD_DYNAMIC_TABLE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Build dynamic internal table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BUILD_DYN_RANGE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Build dynamic range table for select option values</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Build dynamic select query</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_PRIMARY_KEY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check if primary key is used in where clause</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_FIELDCAT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Build fieldcatalog for table data display ALV</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INCL_COMPONENTS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get all field components of table includes</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INPUT_VALIDATIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate inputs entered in selection screen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>USE_CONVERSION_EXIT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Call conversion exits for fields if required</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDATE_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate compamy code fiscal year and period</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDATE_FIELDNAME</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate field name entered by user</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDATE_SEQUENCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate sequence in where condition</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDATE_TABLE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate table name entered by user</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDATE_WHEREFIELD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate where condition field if entered</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_DYNAMIC_TABLE</CMPNAME>
+     <SCONAME>I_CHECKTAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check table name of the foreign key</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_DYNAMIC_TABLE</CMPNAME>
+     <SCONAME>I_FIELDNAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_DYNAMIC_TABLE</CMPNAME>
+     <SCONAME>I_TABNAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_DYN_RANGE</CMPNAME>
+     <SCONAME>ET_VALUE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Structure for table name with selection field range table.</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_DYN_RANGE</CMPNAME>
+     <SCONAME>IT_RANGES</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table type of generic SELECT-OPTION for (dynamic selections)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>CT_INTTAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Database table structure</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_FIELDS_WHERE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field names in where as per prog</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_FIELD_WHERE_DB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field names as in dbtable</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_RANGE1</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Range for field1</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_RANGE2</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Range for field2</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_RANGE3</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Range for field3</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_RANGE4</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Range for field4</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_RANGE5</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Range for field5</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_RANGE6</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Range for field6</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>IT_RANGE7</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Range for field7</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>I_DBTAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD_SELECT_QUERY</CMPNAME>
+     <SCONAME>I_PACK_SIZE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Package size for data selection</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PRIMARY_KEY</CMPNAME>
+     <SCONAME>IT_FIELDLIST</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table type for fieldnames</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_FIELDCAT</CMPNAME>
+     <SCONAME>ET_FIELDCAT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field Catalog for List Viewer Control</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_FIELDCAT</CMPNAME>
+     <SCONAME>I_DBTAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INCL_COMPONENTS</CMPNAME>
+     <SCONAME>IM_STRUCTDESCR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Runtime Type Services</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INPUT_VALIDATIONS</CMPNAME>
+     <SCONAME>ET_DDFIELDS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fields in DB table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INPUT_VALIDATIONS</CMPNAME>
+     <SCONAME>ET_FIELDLIST</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field list</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INPUT_VALIDATIONS</CMPNAME>
+     <SCONAME>E_FIELD_SEQUENCE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field sequence for where caluse</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INPUT_VALIDATIONS</CMPNAME>
+     <SCONAME>E_PACK_SIZE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Package size for data selection</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INPUT_VALIDATIONS</CMPNAME>
+     <SCONAME>IT_FIELDS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Where condition fields</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INPUT_VALIDATIONS</CMPNAME>
+     <SCONAME>I_TABNAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>USE_CONVERSION_EXIT</CMPNAME>
+     <SCONAME>CT_VALUES</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table type of generic SELECT-OPTION for (dynamic selections)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>USE_CONVERSION_EXIT</CMPNAME>
+     <SCONAME>I_FIELD</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>USE_CONVERSION_EXIT</CMPNAME>
+     <SCONAME>I_TABLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_DATA</CMPNAME>
+     <SCONAME>IT_RANGE_VALID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table type of generic SELECT-OPTION for (dynamic selections)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_DATA</CMPNAME>
+     <SCONAME>I_CHECK_TAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check table name of the foreign key</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_DATA</CMPNAME>
+     <SCONAME>I_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fieldname for validation</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_DATA</CMPNAME>
+     <SCONAME>I_TABNAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_FIELDNAME</CMPNAME>
+     <SCONAME>ET_DDFIELDS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fields in table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_FIELDNAME</CMPNAME>
+     <SCONAME>E_STRUCT_SIZE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Package size for data selection</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_FIELDNAME</CMPNAME>
+     <SCONAME>I_TAB</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Input table name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_SEQUENCE</CMPNAME>
+     <SCONAME>C_SEQUENCE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field length 90</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_SEQUENCE</CMPNAME>
+     <SCONAME>IT_FIELD_POS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field position in dbtable</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_TABLE</CMPNAME>
+     <SCONAME>I_TABLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>input table name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_WHEREFIELD</CMPNAME>
+     <SCONAME>ET_FIELDPOS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field position intable</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_WHEREFIELD</CMPNAME>
+     <SCONAME>IT_DDFIELDS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fields in database table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATE_WHEREFIELD</CMPNAME>
+     <SCONAME>I_FIELD</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Where condition field name</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

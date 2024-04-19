@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Pass user ids and receive user data</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZAP_IAPTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZAP_IAP</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZAP_IAP_GET_DOA_DATA</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Pass User Data and Return DOA Data from US SAP Instance</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>USER_DATA</PARAMETER>
+       <DBSTRUCT>ZAPS_USER_DATA</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>DOA_DATA</PARAMETER>
+       <DBSTRUCT>ZFIS_DOA_US</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>SYSTEM_FAILURE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>COMMUNICATION_FAILURE</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>USER_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DOA_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Deligation of Authority</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SYSTEM_FAILURE</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>COMMUNICATION_FAILURE</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZAP_IAP_GET_USER_DATA</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>RFC to retrieve user data from the HR system</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>USER_NAMES</PARAMETER>
+       <DBSTRUCT>ZAPS_USER_NAMES</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>USER_DATA</PARAMETER>
+       <DBSTRUCT>ZAPS_USER_DATA</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>USER_NAMES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Names</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>USER_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

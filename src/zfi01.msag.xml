@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZFI01</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message Class for FICO Objects</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Active Workflow Found</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>No Approval Authorization; Please forward it to someone else for Approval</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Comments field is empty</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>You are not authorized to access transaction &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Invalid Trip</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Please mention Reason of Rejection</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Invalid Factory Calendar</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>No Agent Found</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>One Approval fo GL</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Two Approval for GL</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Input File Path &amp; doesn&apos;t Exist</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Out File Path &amp; doesn&apos;t Exist</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>No Record Transferred to any File</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>File Paths Not Maintained in table ZFIT_XPARAM for Instance &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>RFC Destination &amp; does not Exist for &amp; instance</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>File Paths Not Maintained in table ZFIT_XPARAM for Instance</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>&amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>E-mail ID is not maintained in custom table ZFIT_XPARAM</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>OutPut File Path not Maintained in table ZFIT_XPARAM</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Formatted File transferred to the location &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Unable to select the file Path</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>022</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>059</MSGNR>
+     <TEXT>Duplicate Invoice(s) found across company code: Reference &amp; Amount &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>081</MSGNR>
+     <TEXT>Please enter filename</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>082</MSGNR>
+     <TEXT>Please enter filepath</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZFI01</ARBGB>
+     <MSGNR>214</MSGNR>
+     <TEXT>Enter ERP ID</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

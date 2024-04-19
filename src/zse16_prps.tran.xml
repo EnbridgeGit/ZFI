@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TRAN" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TSTC>
+    <TCODE>ZSE16_PRPS</TCODE>
+    <CINFO>Ag==</CINFO>
+   </TSTC>
+   <TSTCC>
+    <TCODE>ZSE16_PRPS</TCODE>
+    <S_WEBGUI>1</S_WEBGUI>
+    <S_PLATIN>X</S_PLATIN>
+   </TSTCC>
+   <TSTCT>
+    <SPRSL>E</SPRSL>
+    <TCODE>ZSE16_PRPS</TCODE>
+    <TTEXT>Data Browser Table Name EKPO</TTEXT>
+   </TSTCT>
+   <TSTCP>
+    <TCODE>ZSE16_PRPS</TCODE>
+    <PARAM>/*SE16 DATABROWSE-TABLENAME=PRPS;</PARAM>
+   </TSTCP>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function group for SRM workflow</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZSRM_SC_WFTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZSRM_SC_WF</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZGET_CONTRACTDTE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get lead time</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ICONTRACT</PARAMETER>
+       <TYP>EBELN</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>IPLIFZ</PARAMETER>
+       <TYP>PLIFZ</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ICONTRACT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchasing Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IPLIFZ</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Planned Delivery Time in Days</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZGET_MATDETAILS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get material status</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IMATNR</PARAMETER>
+       <TYP>MATNR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>IMSTAE</PARAMETER>
+       <TYP>MSTAE</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IMATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IMSTAE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Cross-Plant Material Status</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZSRM_GET_CONTRACT_NO</FUNCNAME>
+     <SHORT_TEXT>Find Contract Number assigned to Limit SC using PO</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>EBELN</PARAMETER>
+       <TYP>EBELN</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EBELP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>EBELP</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>DETAILS</PARAMETER>
+       <DBSTRUCT>ZPOCONTRACT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>EBELN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchasing Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EBELP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Item Number of Purchasing Document</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DETAILS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Contract Numers assigned to PO Items</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZSRM_ISNETCHECK</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Check INSET</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ISNVDR</PARAMETER>
+       <TYP>CHAR10</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ILAND1</PARAMETER>
+       <TYP>LAND1_GP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IREGIO</PARAMETER>
+       <TYP>REGIO</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>INSQUAL</PARAMETER>
+       <TYP>CHAR1</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ISNVDR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character Field Length = 10</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ILAND1</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Country Key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IREGIO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Region (State, Province, County)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>INSQUAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Single-Character Indicator</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZSRM_SC_LIM_CONTRACT_WF</FUNCNAME>
+     <SHORT_TEXT>Check Function for Limit SC PO</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>OBJTYPE</PARAMETER>
+       <DBFIELD>SWETYPECOU-OBJTYPE</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OBJKEY</PARAMETER>
+       <DBFIELD>SWEINSTCOU-OBJKEY</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EVENT</PARAMETER>
+       <DBFIELD>SWEINSTCOU-EVENT</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>RECTYPE</PARAMETER>
+       <DBFIELD>SWETYPECOU-RECTYPE</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>EVENT_CONTAINER</PARAMETER>
+       <DBSTRUCT>SWCONT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>WORKFLOW_NOT_REQUIRED</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>OBJTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJKEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EVENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Event</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of Receiver Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EVENT_CONTAINER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Instance Structure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WORKFLOW_NOT_REQUIRED</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
